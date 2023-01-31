@@ -10,15 +10,6 @@
 namespace AchadosEPerdidos {
     
     
-    public partial class SiteMaster {
-        
-        /// <summary>
-        /// Controle MainContent.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+    public partial class Inicial {
     }
 }
