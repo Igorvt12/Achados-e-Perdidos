@@ -16,7 +16,7 @@ namespace AchadosEPerdidos
         }
 
         protected void btnFuncionarios_Click(object sender, EventArgs e)
-        {
+        { 
             pnlInfosFuncionarios.Visible = true;
         }
     }
