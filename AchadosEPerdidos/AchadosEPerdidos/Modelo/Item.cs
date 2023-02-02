@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace AchadosEPerdidos.Modelos
+namespace AchadosEPerdidos.Modelo
 {
     public class Item
     {

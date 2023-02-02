@@ -76,6 +76,15 @@ namespace AchadosEPerdidos {
         protected global::System.Web.UI.WebControls.TextBox txtCreateNomeFuncionario;
         
         /// <summary>
+        /// Controle txtCreateEmailFuncionario.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtCreateEmailFuncionario;
+        
+        /// <summary>
         /// Controle txtCreateSenhaFuncionario.
         /// </summary>
         /// <remarks>

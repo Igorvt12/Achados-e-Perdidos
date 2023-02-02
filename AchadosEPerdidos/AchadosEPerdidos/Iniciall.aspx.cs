@@ -17,6 +17,15 @@ namespace AchadosEPerdidos
         protected void btnFuncionarios_Click(object sender, EventArgs e)
         {
             pnlInfosFuncionarios.Visible = true;
+
+            Modelo.Funcionario NovoFuncionario = new Modelo.Funcionario();
+            NovoFuncionario.Usuario = txtCreateNomeFuncionario.Text;
+            NovoFuncionario.Senha = txtCreateSenhaFuncionario.Text;
+            NovoFuncionario.Email = txtCreateEmailFuncionario.Text;
+
+
+            Negocio.Funcionario AcoesFuncionario = new Negocio.Funcionario();
+            AcoesFuncionario.Create(NovoFuncionario);
         }
     }
 }
