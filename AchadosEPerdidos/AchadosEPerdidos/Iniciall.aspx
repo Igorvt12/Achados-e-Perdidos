@@ -29,6 +29,8 @@
             <br />
             Nome:
             <asp:TextBox runat="server" ID="txtCreateNomeFuncionario" placeholder="Insira seu nome de funcionário"></asp:TextBox>
+            <br /><br />
+            Email:<asp:TextBox runat="server" ID="txtCreateEmailFuncionario" placeholder="Insira seu email"></asp:TextBox>
             <br />
             Senha:
             <asp:TextBox runat="server" ID="txtCreateSenhaFuncionario" placeholder="Insira sua senha"></asp:TextBox>
