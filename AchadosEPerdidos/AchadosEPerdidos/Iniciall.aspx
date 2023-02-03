@@ -13,12 +13,12 @@
             <br />
             <br />
             <asp:Panel runat="server" ID="pnlInfosFuncionarios" Visible="false">
-                <asp:TextBox runat="server" ID="txtFuncionarios" placeholder="Insira seu nome"></asp:TextBox>
+                <asp:TextBox runat="server" ID="txtEmailFuncionarios" placeholder="Insira seu email"></asp:TextBox>
 
-                <asp:TextBox runat="server" ID="txtSenha" placeholder="Insira sua senha"></asp:TextBox>
+                <asp:TextBox runat="server" ID="txtSenha" TextMode="Password" placeholder="Insira sua senha"></asp:TextBox>
                 <br />
                 <br />
-                <asp:Button runat="server" ID="btnEntrar" Text="Entrar" CssClass="btn btn-success" />
+                <asp:Button runat="server" ID="btnEntrar" Text="Entrar" CssClass="btn btn-success" OnClick="btnEntrar_Click" />
                 <br />
                 <br />
             </asp:Panel>
@@ -29,14 +29,18 @@
             <br />
             Nome:
             <asp:TextBox runat="server" ID="txtCreateNomeFuncionario" placeholder="Insira seu nome de funcionário"></asp:TextBox>
-            <br /><br />
+            <br />
+            <br />
             Email:<asp:TextBox runat="server" ID="txtCreateEmailFuncionario" placeholder="Insira seu email"></asp:TextBox>
+            <asp:Label runat="server" ID="lblEmail" ForeColor="Red"></asp:Label>
             <br />
             Senha:
-            <asp:TextBox runat="server" ID="txtCreateSenhaFuncionario" placeholder="Insira sua senha"></asp:TextBox>
+            <asp:TextBox runat="server" ID="txtCreateSenhaFuncionario" TextMode="Password" placeholder="Insira sua senha"></asp:TextBox>
+            <br />
+            <asp:TextBox runat="server" ID="txtConfirmaSenha" TextMode="Password" placeholder="Confirme sua senha"></asp:TextBox>
             <br />
             <br />
-            <asp:Button runat="server" ID="btnCreateFuncionario" Text="Criar Funcionario" CssClass="btn btn-warning" />
+            <asp:Button runat="server" ID="btnCreateFuncionario" Text="Criar Funcionario" CssClass="btn btn-warning" OnClick="btnCreateFuncionario_Click" />
         </div>
     </div>
     <div class="col-sm-2"></div>
