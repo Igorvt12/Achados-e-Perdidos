@@ -3,14 +3,18 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
     <h2>Insira as informações do item encontrado/perdido</h2>
-
-    <div class="col-sm-6">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-9">
         <div class="jumbotron Jumbotron">
-            <h2 class="Titulo">Cadastro de Itens que foram achados ou perdidos.</h2>
+            <h2 class="Titulo">Cadastro de Itens</h2>
             <br />
-            <p>TEXTO TEXTO TEXTO</p>
-            <span class="Textos">* Cadastro do Item</span>
+            <h4 class="Frase">Você que perdeu ou achou algum item que não seja de sua posse, pode inserir as informações abaixo.</h4>
             <br />
+            <h4 class="Frase">Insira as informações necessárias e clique em CADASTRAR ITEM.</h4>
+                                                
+            <br><br />
+            <h3 class="Textos">* Cadastro do Item</h3>
+            
             <br />
             <asp:TextBox runat="server" ID="txtNomeItem" CssClass="TextBox" placeholder="Digite o nome/tipo do item"></asp:TextBox>
             <br />
@@ -31,20 +35,16 @@
             <asp:Label runat="server" ID="lblEmail" ForeColor="Red"></asp:Label>
             <br />
             <br />
-            <asp:Button runat="server" ID="btnCadastrarItem" CssClass="Botão" Text="Cadastrar Item" OnClick="btnCadastrarItem_Click" />
+            <asp:Button runat="server" ID="btnCadastrarItem" CssClass="BotãoRed" Text="Cadastrar Item" OnClick="btnCadastrarItem_Click" />
+
+                                        
+            
+            <!--Começar a fazer a Barra de Pesquisa-->
+
+
+
         </div>
-    </div>
+    </div>      
 
-    <div class="col-sm-3">
-        <div class="jumbotron">
-            <h2>Aqui será inserido algumas informações.</h2>
-        </div>
-    </div>
-
-
-    <div class="col-sm-3"></div>
-
-
-
-
+    <br />    
 </asp:Content>
