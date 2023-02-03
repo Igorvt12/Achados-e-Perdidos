@@ -17,9 +17,12 @@
             <h3 class="Textos">* Cadastro do Item</h3>
             <div class="col-sm-6">
                 <br />
+                <h4 class="Textos">Nome do Item</h4>
                 <asp:TextBox runat="server" ID="txtNomeItem" CssClass="TextBox" placeholder="Digite o nome/tipo do item"></asp:TextBox>
                 <br />
                 <br />
+                <br />
+                <h4 class="Textos">Nome</h4>
                 <asp:TextBox runat="server" ID="txtNomePessoa" CssClass="TextBox" placeholder="Digite seu nome"></asp:TextBox>
                 <br />
                 <br />
@@ -39,13 +42,29 @@
                 <asp:Button runat="server" ID="btnCadastrarItem" CssClass="BotãoRed" Text="Cadastrar Item" OnClick="btnCadastrarItem_Click" />
                 <br />
             </div>
-        <div class="col-sm-6">
-            <div class="jumbotron Jumbotron">
-                <p class="Frase">Ao inserir as informações do item ao lado, você ou a pessoa que perdeu poderá consultar os items que foram perdiso</p>
+            <div class="col-sm-6">
+                <div class="jumbotron Jumbotron" style="text-align: center">
+                    <h3 class="Frase">Ao inserir as informações do item ao lado, você ou a pessoa que perdeu poderá consultar os items que foram perdidos na tabela abaixo, através dos filtros.</h3>
+                </div>
             </div>
         </div>
-
     </div>
+    
+    
+    <div class="col-6">
+    <br /><br />
+        <h3 class="Textos">*Encontre seu item perdido.</h3>
+        <div style="text-align:center">
+            <h4 class="Frase">Escolha alguns dos filtros e insira alguma informação de seu item.</h4>
+
+            <!--Irei chamar as textbox que o usuário irá pesquisar de txtPesq (Pesquisa).-->
+            <asp:TextBox runat="server" ID="txtPesqNome" CssClass="TextBox" placeholder="Insira o nome para pesquisa."></asp:TextBox>
+            <br /><br />
+            <asp:TextBox runat="server" ID="txtPesqDescrição" CssClass="TextBox" placeholder="Insira a descrição para pesquisa."></asp:TextBox>
+            <br /><br />
+            <asp:TextBox runat="server" ID="txtPesqLugar" CssClass="TextBox" placeholder="Insira o lugar para pesquisa."></asp:TextBox>
+            <br /><br />
+        </div>
     </div>
 
     <br />
