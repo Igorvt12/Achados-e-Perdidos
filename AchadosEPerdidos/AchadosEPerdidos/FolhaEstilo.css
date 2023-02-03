@@ -37,6 +37,13 @@
     background-color: white;
 }
 
+.JumbotronTexto{
+    width:50px;
+    background-color:black;
+}
+
+
+
 .TextBox { /*Modificações das TextBox*/
     width: 900px;
     height: 34px;
@@ -48,8 +55,7 @@
     background-color: #f1f1f1;
     background-image: none;
     border: 1px solid #eee;
-    border-radius: 4px;
-    
+    border-radius: 4px;    
     
 }
 
