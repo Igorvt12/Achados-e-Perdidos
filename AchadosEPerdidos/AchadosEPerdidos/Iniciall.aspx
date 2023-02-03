@@ -5,6 +5,7 @@
     <div class="container" style="position: relative; background-color: white;"></div>
     <div class="col-sm-3"></div>
     <div class="col-sm-6">
+
         <div class="jumbotron Jumbotron">
             <h2 class="Titulo" style="text-align: center">LOGIN</h2>
             <div style="text-align: center">
@@ -30,10 +31,12 @@
                     <asp:TextBox runat="server" ID="txtCreateSenhaFuncionario" CssClass="TextBox" placeholder="Insira sua senha"></asp:TextBox>
                     <br /><br />                    
                     <asp:Button runat="server" ID="btnCreateFuncionario" Text="Criar Funcionario" CssClass="BotãoRed" />
-                </asp:Panel>
-            
-            
+                </asp:Panel>                        
             </div>
+                <asp:Button runat="server" ID="btnEntrar" Text="Entrar" CssClass="btn btn-success" OnClick="btnEntrar_Click" />
+                
+            <asp:Button runat="server" ID="btnCreateFuncionario" Text="Criar Funcionario" CssClass="btn btn-warning" OnClick="btnCreateFuncionario_Click" />
+
         </div>
     </div>
 
