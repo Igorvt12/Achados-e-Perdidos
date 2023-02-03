@@ -16,26 +16,29 @@
                 
                 
                 <asp:Panel runat="server" ID="pnlInfosFuncionarios" Visible="false">
-                    <asp:TextBox runat="server" ID="txtFuncionarios" CssClass="TextBox" placeholder="Insira seu email"></asp:TextBox>
+                    <asp:TextBox runat="server" ID="txtEmailFuncionarios" CssClass="TextBox" placeholder="Insira seu email"></asp:TextBox>
                     <br /><br />
                     <asp:TextBox runat="server" ID="txtSenha" CssClass="TextBox" placeholder="Insira sua senha"></asp:TextBox>
                     <br /><br />                    
-                    <asp:Button runat="server" ID="btnEntrar" Text="Entrar" CssClass="BotãoAzul" />
+                    <asp:Button runat="server" ID="btnEntrar" Text="Entrar" CssClass="BotãoAzul" OnClick="btnEntrar_Click" />
+                
                     <br /><br /><br />                    
                     Não possui um cadastro de funcionário?
                     <br />
                     <asp:TextBox runat="server" ID="txtCreateNomeFuncionario" CssClass="TextBox" placeholder="Insira seu nome"></asp:TextBox>
                     <br /><br />                    
                     <asp:TextBox runat="server" ID="txtCreateEmailFuncionario" CssClass="TextBox" placeholder="Insira seu email"></asp:TextBox>
+                    <asp:Label runat="server" ID="lblEmail" CssClass="Textos"></asp:Label>
                     <br /><br />                    
                     <asp:TextBox runat="server" ID="txtCreateSenhaFuncionario" CssClass="TextBox" placeholder="Insira sua senha"></asp:TextBox>
+                    <br /><br />
+                    <asp:TextBox runat="server" ID="txtConfirmaSenha" CssClass="TextBox"></asp:TextBox>
                     <br /><br />                    
-                    <asp:Button runat="server" ID="btnCreateFuncionario" Text="Criar Funcionario" CssClass="BotãoRed" />
+                    <asp:Button runat="server" ID="btnCreateFuncionario" Text="Criar Funcionario" CssClass="BotãoRed" OnClick="btnCreateFuncionario_Click" />
+                    
                 </asp:Panel>                        
             </div>
-                <asp:Button runat="server" ID="btnEntrar" Text="Entrar" CssClass="btn btn-success" OnClick="btnEntrar_Click" />
                 
-            <asp:Button runat="server" ID="btnCreateFuncionario" Text="Criar Funcionario" CssClass="btn btn-warning" OnClick="btnCreateFuncionario_Click" />
 
         </div>
     </div>
