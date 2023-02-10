@@ -11,7 +11,6 @@
             <h4 class="Frase">Você que perdeu ou achou algum item que não seja de sua posse, pode inserir as informações abaixo.</h4>
             <br />
             <h4 class="Frase">Insira as informações necessárias e clique em CADASTRAR ITEM.</h4>
-
             <br>
             <br />
             <h3 class="Textos">* Cadastro do Item</h3>

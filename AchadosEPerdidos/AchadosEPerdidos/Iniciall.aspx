@@ -18,6 +18,7 @@
                 <asp:Panel runat="server" ID="pnlInfosFuncionarios" Visible="false">
                     <asp:TextBox runat="server" ID="txtEmailFuncionarios" CssClass="TextBox" placeholder="Insira seu email"></asp:TextBox>
                     <br /><br />
+                    <asp:TextBox runat="server" ID="txtEmailFuncionarios" CssClass="TextBox"></asp:TextBox>
                     <asp:TextBox runat="server" ID="txtSenha" CssClass="TextBox" placeholder="Insira sua senha"></asp:TextBox>
                     <br /><br />                    
                     <asp:Button runat="server" ID="btnEntrar" Text="Entrar" CssClass="BotãoAzul" OnClick="btnEntrar_Click" />
@@ -31,11 +32,14 @@
                     <asp:Label runat="server" ID="lblEmail" CssClass="Textos"></asp:Label>
                     <br /><br />                    
                     <asp:TextBox runat="server" ID="txtCreateSenhaFuncionario" CssClass="TextBox" placeholder="Insira sua senha"></asp:TextBox>
-                    <br /><br />
-                    <asp:TextBox runat="server" ID="txtConfirmaSenha" CssClass="TextBox"></asp:TextBox>
-                    <br /><br />                    
-                    <asp:Button runat="server" ID="btnCreateFuncionario" Text="Criar Funcionario" CssClass="BotãoRed" OnClick="btnCreateFuncionario_Click" />
+
+
+                    <asp:TextBox runat="server" ID="txtConfirmaSenha" CssClass="TextBox" placeholder="Confirme sua senha"></asp:TextBox>
                     
+                    <asp:Button runat="server" ID="btnCreateFuncionario" Text="Criar Funcionario" CssClass="BotãoRed" OnClick="btnCreateFuncionario_Click" />
+                    <br /><br />                    
+                    <asp:Label runat="server" ID="lblEmail" ForeColor="Red"></asp:Label>
+
                 </asp:Panel>                        
             </div>
                 
