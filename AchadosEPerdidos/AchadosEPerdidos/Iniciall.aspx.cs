@@ -79,5 +79,10 @@ namespace AchadosEPerdidos
             }
             SiteMaster.ExibirAlert(this, "Senha ou Email incorreto!");
         }
+
+        protected void btnUsuario_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Processos/CadastroItens.aspx");
+        }
     }
 }
