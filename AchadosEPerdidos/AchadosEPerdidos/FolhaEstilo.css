@@ -67,6 +67,8 @@
     border-radius: 4px;
     font-size: 15px;
     height: 40px;
+    border-color: white;
+    
 }
 
 .BotãoAzul {
@@ -79,8 +81,8 @@
     height: 40px;
 }
 
-.Container {    
-    background-color: red;
-    width: 20px;
-    height: 30px;
+.JumbotronBorda {
+    border-bottom: 1px solid;
+    border-color: #b50d3a;
+    border-radius:4px;
 }
