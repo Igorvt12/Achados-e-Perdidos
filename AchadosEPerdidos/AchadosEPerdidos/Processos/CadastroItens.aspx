@@ -32,13 +32,13 @@
             <br />
             <br />
             <asp:TextBox runat="server" ID="txtEmail" CssClass="TextBox" placeholder="Email para contato"></asp:TextBox>
-            <asp:Label runat="server" ID="lblEmail" ForeColor="Red"></asp:Label>
+            
             <br />
             <br />
             <asp:Button runat="server" ID="btnCadastrarItem" CssClass="BotãoRed" Text="Cadastrar Item" OnClick="btnCadastrarItem_Click" />
 
                                         
-            
+            <asp:label runat="server" ID="lblEmail"></asp:label> 
             <!--Começar a fazer a Barra de Pesquisa-->
 
 
