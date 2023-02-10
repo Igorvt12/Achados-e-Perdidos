@@ -110,6 +110,7 @@ namespace AchadosEPerdidos.Processos {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPesqLugar;
+
         
         /// <summary>
         /// Controle btnPesquisar.
@@ -119,5 +120,6 @@ namespace AchadosEPerdidos.Processos {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnPesquisar;
+
     }
 }
