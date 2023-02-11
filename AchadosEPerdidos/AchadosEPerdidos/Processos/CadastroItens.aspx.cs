@@ -5,6 +5,7 @@ using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Serilog;
 
 namespace AchadosEPerdidos.Processos
 {
@@ -29,11 +30,63 @@ namespace AchadosEPerdidos.Processos
         }
         protected void btnCadastrarItem_Click(object sender, EventArgs e)
         {
+            Log.Logger = new LoggerConfiguration()
+           .WriteTo.File("C:\\temp\\myapp.txt",
+           restrictedToMinimumLevel: Serilog.Events.LogEventLevel.Information,
+           rollingInterval: RollingInterval.Hour)
+           .CreateLogger(); 
+
+            if (txtNomeItem.Text == "")
+            {
+                lblNomeItem.Text = "Campo obrigatório!";
+                return;
+            }
+            else
+            {
+                lblNomeItem.Text = "";
+            }
+            if (txtNomePessoa.Text == "")
+            {
+                lblNomePessoa.Text = "Campo obrigatório!";
+                return;
+            }
+            else
+            {
+                lblNomePessoa.Text = "";
+            }
+            if (txtDescricao.Text == "")
+            {
+                lblDescrição.Text = "Campo obrigatório!";
+                return;
+            }
+            else
+            {
+                lblDescrição.Text = "";
+            }
+            if (txtLugar.Text == "")
+            {
+                lblLugar.Text = "Campo obrigatório!";
+                return;
+            }
+            else
+            {
+                lblLugar.Text = "";
+            }
+            if (txtData.Text == "")
+            {
+                lblData.Text = "Campo obrigatório!";
+                return;
+            }
+            else
+            {
+                lblData.Text = "";
+            }
 
             //Verificar se o email é válido
             if (VerificaEmail(txtEmail.Text) == false)
             {
                 lblEmail.Text = "Email inválido!";
+                Log.Information("Email do usuario é inválido");
                 return;
             }
             else
@@ -41,18 +94,19 @@ namespace AchadosEPerdidos.Processos
                 lblEmail.Text = "";
             }
 
+
             try
             {
                 Modelo.Item NovoItem = new Modelo.Item();
                 NovoItem.NomeItem = txtNomeItem.Text;
                 NovoItem.Lugar = txtLugar.Text;
-                NovoItem.Descrição = txtDescrição.Text;
+                NovoItem.Descrição = txtDescricao.Text;
                 NovoItem.Status = false;
                 NovoItem.Data = Convert.ToDateTime(txtData.Text);
                 NovoItem.NomePessoa = txtNomePessoa.Text;
                 NovoItem.Email = txtEmail.Text;
                 NovoItem.Id_Funcionario = 1;
-
+           
                 Negocio.Item AcoesItem = new Negocio.Item();
                 AcoesItem.Create(NovoItem);
                 SiteMaster.ExibirAlert(this, "Item Cadastrado com sucesso!");
@@ -60,7 +114,21 @@ namespace AchadosEPerdidos.Processos
             catch
             {
                 SiteMaster.ExibirAlert(this, "Não foi possível cadastrar, tente novamente");
+                Log.Information("Erro ao cadastrar item");
             }
+
+            txtNomeItem.Text = "";
+            txtLugar.Text = "";
+            txtDescricao.Text = "";
+            txtData.Text = "";
+            txtNomePessoa.Text = "";
+            txtEmail.Text = "";
+
+        }
+
+        protected void btnPesquisar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

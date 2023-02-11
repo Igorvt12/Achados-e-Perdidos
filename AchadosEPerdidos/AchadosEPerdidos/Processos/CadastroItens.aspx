@@ -19,26 +19,36 @@
                 <h4 class="Textos">Nome do Item</h4>
                 <asp:TextBox runat="server" ID="txtNomeItem" CssClass="TextBox" placeholder="Digite o nome/tipo do item"></asp:TextBox>
                 <br />
+                <asp:Label runat="server" ID="lblNomeItem" ForeColor="Red"></asp:Label>
+                <br />
                 <br />
                 <br />
                 <h4 class="Textos">Nome</h4>
                 <asp:TextBox runat="server" ID="txtNomePessoa" CssClass="TextBox" placeholder="Digite seu nome"></asp:TextBox>
                 <br />
+                <asp:Label runat="server" ID="lblNomePessoa" ForeColor="Red"></asp:Label>
                 <br />
-                <asp:TextBox runat="server" ID="txtDescrição" CssClass="TextBox" placeholder="Descrição detalhada do item."></asp:TextBox>
+                <br />
+                <asp:TextBox runat="server" ID="txtDescricao" CssClass="TextBox" placeholder="Descrição detalhada do item."></asp:TextBox>
+                <br />
+                <asp:Label runat="server" ID="lblDescrição" ForeColor="Red"></asp:Label>
                 <br />
                 <br />
                 <asp:TextBox runat="server" ID="txtLugar" CssClass="TextBox" placeholder="Lugar que foi encontrado"></asp:TextBox>
                 <br />
+                <asp:Label runat="server" ID="lblLugar" ForeColor="Red"></asp:Label>
+                <br />
                 <br />
                 <asp:TextBox runat="server" ID="txtData" CssClass="TextBox" placeholder="Data que foi encontrada"></asp:TextBox>
+                <br />
+                <asp:Label runat="server" ID="lblData" ForeColor="Red"></asp:Label>
                 <br />
                 <br />
                 <asp:TextBox runat="server" ID="txtEmail" CssClass="TextBox" placeholder="Email para contato"></asp:TextBox>
                 <asp:Label runat="server" ID="lblEmail" ForeColor="Red"></asp:Label>
                 <br />
                 <br />
-                <asp:Button runat="server" ID="btnCadastrarItem" CssClass="BotãoRed" Text="Cadastrar Item; sc"  OnClick="btnCadastrarItem_Click" />
+                <asp:Button runat="server" ID="btnCadastrarItem" CssClass="BotãoRed" Text="Cadastrar Item"  OnClick="btnCadastrarItem_Click" />
                 <br />
             </div>
             <div class="col-sm-6">
@@ -65,7 +75,7 @@
             <asp:TextBox runat="server" ID="txtPesqLugar" CssClass="TextBox" placeholder="Insira o lugar para pesquisa."></asp:TextBox>
             <br />
             <br />
-            <asp:Button runat="server" ID="btnPesquisar" CssClass="BotãoRed" Text="Pesquisar Item" />
+            <asp:Button runat="server" ID="btnPesquisar" CssClass="BotãoRed" Text="Pesquisar Item" OnClick="btnPesquisar_Click" />
         </div>
 
     </div>
