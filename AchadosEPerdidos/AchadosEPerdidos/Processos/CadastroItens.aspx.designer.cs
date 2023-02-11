@@ -22,6 +22,15 @@ namespace AchadosEPerdidos.Processos {
         protected global::System.Web.UI.WebControls.TextBox txtNomeItem;
         
         /// <summary>
+        /// Controle lblNomeItem.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblNomeItem;
+        
+        /// <summary>
         /// Controle txtNomePessoa.
         /// </summary>
         /// <remarks>
@@ -31,13 +40,31 @@ namespace AchadosEPerdidos.Processos {
         protected global::System.Web.UI.WebControls.TextBox txtNomePessoa;
         
         /// <summary>
-        /// Controle txtDescrição.
+        /// Controle lblNomePessoa.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDescrição;
+        protected global::System.Web.UI.WebControls.Label lblNomePessoa;
+        
+        /// <summary>
+        /// Controle txtDescricao.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtDescricao;
+        
+        /// <summary>
+        /// Controle lblDescrição.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblDescrição;
         
         /// <summary>
         /// Controle txtLugar.
@@ -49,6 +76,15 @@ namespace AchadosEPerdidos.Processos {
         protected global::System.Web.UI.WebControls.TextBox txtLugar;
         
         /// <summary>
+        /// Controle lblLugar.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblLugar;
+        
+        /// <summary>
         /// Controle txtData.
         /// </summary>
         /// <remarks>
@@ -56,6 +92,15 @@ namespace AchadosEPerdidos.Processos {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtData;
+        
+        /// <summary>
+        /// Controle lblData.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblData;
         
         /// <summary>
         /// Controle txtEmail.

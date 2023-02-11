@@ -35,16 +35,34 @@ namespace AchadosEPerdidos
 
         protected void btnCreateFuncionario_Click(object sender, EventArgs e)
         {
+            if (txtCreateNomeFuncionario.Text == "")
+            {
+                lblCreateNomeFunc.Text = "Campo obrigatório!";
+                return;
+            }
+            lblCreateNomeFunc.Text = "";
+
             //Verificar se o email é válido
             if (VerificaEmail(txtCreateEmailFuncionario.Text) == false)
             {
-                lblEmail.Text = "Email inválido!";
+                lblCreateEmailFunc.Text = "Email inválido!";
                 return;
             }
-            else
+            lblCreateEmailFunc.Text = "";
+
+            if (txtCreateSenhaFuncionario.Text == "")
             {
-                lblEmail.Text = "";
+                lblCreateSenhaFunc.Text = "Campo obrigatório!";
+                return;
             }
+            lblCreateSenhaFunc.Text = "";
+
+            if (txtConfirmaSenha.Text == "")
+            {
+                lblConfirmaSenha.Text = "Campo obrigatório!";
+                return;
+            }
+            lblConfirmaSenha.Text = "";
 
             //Verificar se a senha é igual
             if (txtCreateSenhaFuncionario.Text != txtConfirmaSenha.Text && txtCreateSenhaFuncionario.Text.Trim() != "")

@@ -76,6 +76,15 @@ namespace AchadosEPerdidos {
         protected global::System.Web.UI.WebControls.TextBox txtCreateNomeFuncionario;
         
         /// <summary>
+        /// Controle lblCreateNomeFunc.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCreateNomeFunc;
+        
+        /// <summary>
         /// Controle txtCreateEmailFuncionario.
         /// </summary>
         /// <remarks>
@@ -85,13 +94,13 @@ namespace AchadosEPerdidos {
         protected global::System.Web.UI.WebControls.TextBox txtCreateEmailFuncionario;
         
         /// <summary>
-        /// Controle lblEmail.
+        /// Controle lblCreateEmailFunc.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEmail;
+        protected global::System.Web.UI.WebControls.Label lblCreateEmailFunc;
         
         /// <summary>
         /// Controle txtCreateSenhaFuncionario.
@@ -103,6 +112,15 @@ namespace AchadosEPerdidos {
         protected global::System.Web.UI.WebControls.TextBox txtCreateSenhaFuncionario;
         
         /// <summary>
+        /// Controle lblCreateSenhaFunc.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCreateSenhaFunc;
+        
+        /// <summary>
         /// Controle txtConfirmaSenha.
         /// </summary>
         /// <remarks>
@@ -110,6 +128,15 @@ namespace AchadosEPerdidos {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtConfirmaSenha;
+        
+        /// <summary>
+        /// Controle lblConfirmaSenha.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblConfirmaSenha;
         
         /// <summary>
         /// Controle btnCreateFuncionario.
