@@ -1,7 +1,8 @@
-﻿body { /*Cor do Fundo*/
-    /*background: rgb(221,221,221);
-    background: linear-gradient(132deg, rgba(221,221,221,1) 0%, rgba(1,67,74,1) 0%, rgba(193,82,106,1) 86%, rgba(193,82,106,1) 100%);*/
-    background-color: white;
+﻿
+
+.ContainerDeCima {
+    background: rgb(181,175,177);
+    background: linear-gradient(132deg, rgba(181,175,177,1) 0%, rgba(0,0,0,1) 0%, rgba(32,8,14,1) 0%, rgba(181,13,48,1) 100%);
 }
 
 .Titulo { /*Cor do Titulo*/
@@ -29,6 +30,12 @@
     padding: 0px;
     margin: 0px;
     font-weight: 300;
+}
+
+.FraseContainer {
+    color: white;
+    font-family: "Montserrat",sans-serif;
+   
 }
 
 
@@ -85,4 +92,12 @@
     border-bottom: 1px solid;
     border-color: #b50d3a;
     border-radius:4px;
+}
+
+
+.containerfluid {
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
 }
