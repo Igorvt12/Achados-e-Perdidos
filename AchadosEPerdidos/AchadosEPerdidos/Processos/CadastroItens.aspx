@@ -1,6 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CadastroItens.aspx.cs" Inherits="AchadosEPerdidos.Processos.CadastroItens" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+       
+         
 
     <h2>Insira as informações do item encontrado/perdido</h2>
     <div class="col-sm-1"></div>
@@ -48,7 +50,9 @@
                 <asp:Label runat="server" ID="lblEmail" ForeColor="Red"></asp:Label>
                 <br />
                 <br />
-                <asp:Button runat="server" ID="btnCadastrarItem" CssClass="BotãoRed" Text="Cadastrar Item"  OnClick="btnCadastrarItem_Click" />
+
+                <asp:Button runat="server" ID="btnCadastrarItem" CssClass="BotãoRed" Text="Cadastrar Item" OnClick="btnCadastrarItem_Click" />
+
                 <br />
             </div>
             <div class="col-sm-6">
@@ -75,10 +79,13 @@
             <asp:TextBox runat="server" ID="txtPesqLugar" CssClass="TextBox" placeholder="Insira o lugar para pesquisa."></asp:TextBox>
             <br />
             <br />
+
             <asp:Button runat="server" ID="btnPesquisar" CssClass="BotãoRed" Text="Pesquisar Item" OnClick="btnPesquisar_Click" />
+
         </div>
 
     </div>
-
+                              
+            
     <br />
 </asp:Content>
