@@ -86,7 +86,7 @@ namespace AchadosEPerdidos.Processos
             if (VerificaEmail(txtEmail.Text) == false)
             {
                 lblEmail.Text = "Email inválido!";
-                Log.Information("Email do usuario é inválido");
+                Log.Error("Email do usuario é inválido");
                 return;
             }
             else
@@ -114,7 +114,7 @@ namespace AchadosEPerdidos.Processos
             catch
             {
                 SiteMaster.ExibirAlert(this, "Não foi possível cadastrar, tente novamente");
-                Log.Information("Erro ao cadastrar item");
+                Log.Error("Erro ao cadastrar item");
             }
 
             txtNomeItem.Text = "";

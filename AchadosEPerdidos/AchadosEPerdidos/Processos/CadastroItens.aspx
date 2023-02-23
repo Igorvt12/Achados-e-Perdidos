@@ -1,8 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CadastroItens.aspx.cs" Inherits="AchadosEPerdidos.Processos.CadastroItens" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-       
-         
+
+
 
     <h2>Insira as informações do item encontrado/perdido</h2>
     <div class="col-sm-1"></div>
@@ -82,10 +82,21 @@
 
             <asp:Button runat="server" ID="btnPesquisar" CssClass="BotãoRed" Text="Pesquisar Item" OnClick="btnPesquisar_Click" />
 
+            <h1 class="text-center" style="color: white; font-family: Monaco">ITENS ENCONTRADOS</h1>
+            
+            <asp:GridView runat="server" ID="grdItens" Width="100%" AutoGenerateColumns="false" AllowPaging="false">
+                <Columns>
+                    <asp:BoundField DataField="nomeitem" HeaderText="Nome do Item" />
+                    <asp:BoundField DataField="descricao" HeaderText="Descrição" />
+                    <asp:BoundField DataField="lugar" HeaderText="Lugar" />                    
+                </Columns>
+            </asp:GridView>
+
+
         </div>
 
     </div>
-                              
-            
+
+
     <br />
 </asp:Content>
