@@ -73,12 +73,7 @@
             <asp:TextBox runat="server" ID="txtPesqNome" CssClass="TextBox" placeholder="Insira o nome para pesquisa."></asp:TextBox>
             <br />
             <br />
-            <asp:TextBox runat="server" ID="txtPesqDescrição" CssClass="TextBox" placeholder="Insira a descrição para pesquisa."></asp:TextBox>
-            <br />
-            <br />
-            <asp:TextBox runat="server" ID="txtPesqLugar" CssClass="TextBox" placeholder="Insira o lugar para pesquisa."></asp:TextBox>
-            <br />
-            <br />
+            
 
             <asp:Button runat="server" ID="btnPesquisar" CssClass="BotãoRed" Text="Pesquisar Item" OnClick="btnPesquisar_Click" />
 

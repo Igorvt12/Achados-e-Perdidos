@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using MySqlConnector;
 using Serilog;
 
 namespace AchadosEPerdidos.Processos
@@ -13,6 +15,10 @@ namespace AchadosEPerdidos.Processos
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+            }
+
 
         }
         private bool VerificaEmail(string testar_email)
@@ -34,7 +40,7 @@ namespace AchadosEPerdidos.Processos
            .WriteTo.File("C:\\temp\\myapp.txt",
            restrictedToMinimumLevel: Serilog.Events.LogEventLevel.Information,
            rollingInterval: RollingInterval.Hour)
-           .CreateLogger(); 
+           .CreateLogger();
 
             if (txtNomeItem.Text == "")
             {
@@ -100,13 +106,13 @@ namespace AchadosEPerdidos.Processos
                 Modelo.Item NovoItem = new Modelo.Item();
                 NovoItem.NomeItem = txtNomeItem.Text;
                 NovoItem.Lugar = txtLugar.Text;
-                NovoItem.Descrição = txtDescricao.Text;
+                NovoItem.Descricao = txtDescricao.Text;
                 NovoItem.Status = false;
                 NovoItem.Data = Convert.ToDateTime(txtData.Text);
                 NovoItem.NomePessoa = txtNomePessoa.Text;
                 NovoItem.Email = txtEmail.Text;
                 NovoItem.Id_Funcionario = 1;
-           
+
                 Negocio.Item AcoesItem = new Negocio.Item();
                 AcoesItem.Create(NovoItem);
                 SiteMaster.ExibirAlert(this, "Item Cadastrado com sucesso!");
@@ -128,7 +134,12 @@ namespace AchadosEPerdidos.Processos
 
         protected void btnPesquisar_Click(object sender, EventArgs e)
         {
-
+            
+            var itens = new Negocio.Item().Read("", txtPesqNome.Text, txtLugar.Text, txtDescricao.Text);
+            Session["dados"] = itens;
+            grdItens.DataSource = itens;
+            grdItens.DataBind();
+           
         }
     }
 }
