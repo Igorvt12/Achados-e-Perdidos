@@ -27,7 +27,7 @@ namespace AchadosEPerdidos.Negocio
 
                 comando.Parameters.Add(new MySqlParameter("nomeitem", item.NomeItem));
                 comando.Parameters.Add(new MySqlParameter("lugar", item.Lugar));
-                comando.Parameters.Add(new MySqlParameter("descricao", item.Descrição));
+                comando.Parameters.Add(new MySqlParameter("descricao", item.Descricao));
                 comando.Parameters.Add(new MySqlParameter("dataencontrada", item.Data));
                 comando.Parameters.Add(new MySqlParameter("status", item.Status));
                 comando.Parameters.Add(new MySqlParameter("nomepessoa", item.NomePessoa));
@@ -42,5 +42,59 @@ namespace AchadosEPerdidos.Negocio
             }
             return true;
         }
+        public List<Modelo.Item> Read(string id, string nome, string descricao, string lugar)
+        {
+            var itens = new List<Modelo.Item>();
+            try
+            {
+                connection.Open();               
+                var commando = new MySqlCommand($"SELECT id, nomeitem, descricao, lugar FROM itens WHERE (1=1) ", connection);
+
+                if (id.Equals("") == false)
+                {
+                    commando.CommandText += $" AND id = @id";
+                    commando.Parameters.Add(new MySqlParameter("id", id));
+                }
+                if (nome.Equals("") == false)
+                {
+                    commando.CommandText += $" AND nomeitem like @nomeitem";
+                    commando.Parameters.Add(new MySqlParameter("nomeitem", $"%{nome}%"));
+                }
+                if (descricao.Equals("") == false)
+                {
+                    commando.CommandText += $" AND descricao like @descricao,";
+                    commando.Parameters.Add(new MySqlParameter("descricao", $"%{descricao}%"));
+                }
+                if (lugar.Equals("") == false)
+                {
+                    commando.CommandText += $" AND lugar like @lugar,";
+                    commando.Parameters.Add(new MySqlParameter("lugar", $"%{lugar}%"));
+                }
+            
+                var reader = commando.ExecuteReader();
+                while (reader.Read())
+                {
+                    itens.Add(new Modelo.Item
+                    {
+                        NomeItem = reader.GetString("nomeitem"),
+                        Lugar = reader.GetString("lugar"),
+                        Descricao = reader.GetString("descricao"),
+                        Id = reader.GetInt32("id")
+                    });
+                }
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return itens;
+        }
+
+
+
     }
 }
