@@ -184,7 +184,7 @@ namespace AchadosEPerdidos.Processos
 
                 if (Session["funcionario_logado"] == null)
                 {
-                    e.Row.Cells[3].Text = "PEndente";
+                    e.Row.Cells[3].Text = "Ainda perdido";
                 }
                     if (item.Status == true)
                     {
