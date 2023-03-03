@@ -35,7 +35,6 @@
 .FraseContainer {
     color: white;
     font-family: "Montserrat",sans-serif;
-   
 }
 
 
@@ -48,7 +47,6 @@
     width:50px;
     background-color:black;
 }
-
 
 
 .TextBox { /*Modificações das TextBox*/
@@ -74,8 +72,7 @@
     border-radius: 4px;
     font-size: 15px;
     height: 40px;
-    border-color: white;
-    
+    border-color: white;    
 }
 
 .BotãoAzul {
@@ -95,9 +92,8 @@
 }
 
 
-.containerfluid {
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
+
+.grid{
+    border-color:white;
+    color:red;
 }
