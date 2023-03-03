@@ -147,6 +147,11 @@ namespace AchadosEPerdidos.Processos
             {
                 //
             }
+
+            if (e.CommandName == "status")
+            {
+
+            }
         }
 
 
@@ -176,19 +181,6 @@ namespace AchadosEPerdidos.Processos
         }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
         protected void OnRowDataBound(object sender, GridViewRowEventArgs e)
         {
             if (e.Row.RowType == DataControlRowType.DataRow)
@@ -199,7 +191,7 @@ namespace AchadosEPerdidos.Processos
 
                 if (Session["funcionario_logado"] == null)
                 {
-                    e.Row.Cells[3].Text = "PEndente";
+                    e.Row.Cells[3].Text = "Ainda perdido";
                 }
                     if (item.Status == true)
                     {

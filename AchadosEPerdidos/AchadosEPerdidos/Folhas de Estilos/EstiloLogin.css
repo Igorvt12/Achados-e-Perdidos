@@ -1,0 +1,53 @@
+﻿body {
+    
+
+}
+.Jumbotron { /*Cor da Jumbotron*/
+    text-align: left;
+    background-color: white;
+}
+
+.Titulo { /*Cor do Titulo*/
+    font-size: 27px;
+    color: #b50d3a;
+    font-family: "Montserrat", sans-serif;
+    margin: 0px 0px 15px 0px;
+    line-height: 1.4;
+    color: #b50d3a;
+    font-weight: 500;
+}
+
+.BotãoAzul {
+    background-color: #037971; /*Cor Azul Escuro*/
+    color: white;
+    font-family: "Montserrat-Regular", sans-serif;
+    line-height: 1.42857;
+    border-radius: 4px;
+    font-size: 15px;
+    height: 40px;
+}
+
+.BotãoRed { /*Modificações dos Botões*/
+    background-color: #b50d3a; /*Cor Vermelha*/
+    color: white;
+    font-family: "Montserrat-Regular", sans-serif;
+    line-height: 1.42857;
+    border-radius: 4px;
+    font-size: 15px;
+    height: 40px;
+    border-color: white;
+}
+.TextBox { /*Modificações das TextBox*/
+    width: 900px;
+    height: 34px;
+    padding: 6px 12px;
+    position: center;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #555;
+    background-color: #f1f1f1;
+    background-image: none;
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+

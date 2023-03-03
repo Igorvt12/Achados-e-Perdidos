@@ -146,7 +146,8 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="favicon.ico" />
-    <Content Include="FolhaEstilo.css" />
+    <Content Include="Folhas de Estilos\EstiloCadastro.css" />
+    <Content Include="Folhas de Estilos\EstiloLogin.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

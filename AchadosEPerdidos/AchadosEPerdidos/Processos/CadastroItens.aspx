@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CadastroItens.aspx.cs" Inherits="AchadosEPerdidos.Processos.CadastroItens" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-
+    <link href="../Folhas de Estilos/EstiloCadastro.css" rel="stylesheet" type="text/css" />
 
 
     <h2>Insira as informações do item encontrado/perdido</h2>
@@ -91,13 +91,13 @@
 
             <h1 class="text-center" style="color: white; font-family: Monaco">ITENS ENCONTRADOS</h1>
             
-            <asp:GridView runat="server" ID="grdItens" OnRowCommand="grdItens_RowCommand" OnRowDataBound="OnRowDataBound" OnPageIndexChanging="grdItens_PageIndexChanging" CssClass="grid" Width="100%" AutoGenerateColumns="false" AllowPaging="false">
+            <asp:GridView runat="server" ID="grdItens" OnRowCommand="grdItens_RowCommand" OnRowDataBound="OnRowDataBound" OnPageIndexChanging="grdItens_PageIndexChanging" CssClass="Grid" Width="100%" AutoGenerateColumns="false" AllowPaging="false">
                 <Columns>
                     <asp:BoundField DataField="nomeitem" HeaderText="Nome do Item" />
                     <asp:BoundField DataField="descricao" HeaderText="Descrição" />
 
                     <asp:BoundField DataField="lugar" HeaderText="Lugar" />                    
-                    <asp:ButtonField ButtonType="Button" HeaderText="Status" ControlStyle-CssClass="btn btn-success"/>                    
+                    <asp:ButtonField ButtonType="Button" CommandName="status" Text="Alterar Status para encontrado" ControlStyle-CssClass="btn btn-success"/>                    
                     <asp:ButtonField ButtonType="Link" CommandName="editar" ControlStyle-CssClass="btn btn-warning" Text="Editar" />
                     <asp:ButtonField ButtonType="Link" CommandName="excluir" ControlStyle-CssClass="btn btn-danger" Text="Excluir" />                              
                     
