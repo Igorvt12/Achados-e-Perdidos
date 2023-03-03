@@ -12,7 +12,7 @@ namespace AchadosEPerdidos
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
 
         }
         private bool VerificaEmail(string testar_email)
@@ -96,6 +96,7 @@ namespace AchadosEPerdidos
                 return;
             }
             SiteMaster.ExibirAlert(this, "Senha ou Email incorreto!");
+            Session["funcionario_logado"] = txtEmailFuncionarios.Text;
         }
 
         protected void btnUsuario_Click(object sender, EventArgs e)

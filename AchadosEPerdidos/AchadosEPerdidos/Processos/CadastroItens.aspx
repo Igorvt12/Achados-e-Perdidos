@@ -57,7 +57,7 @@
             </div>
             <div class="col-sm-6">
                 <div class="jumbotron" style="text-align: center; border-color: #b50d3a; border-style: solid; background-color: white;">
-                    <h3 class="Frase">Ao inserir as informações do item ao lado, você ou a pessoa que perdeu poderá consultar os items que foram perdidos na tabela abaixo, através dos filtros.</h3>
+                    <h3  class="Frase">Ao inserir as informações do item ao lado, você ou a pessoa que perdeu poderá consultar os items que foram perdidos na tabela abaixo, através dos filtros.</h3>
                 </div>
             </div>
         </div>
@@ -79,12 +79,13 @@
 
             <h1 class="text-center" style="color: white; font-family: Monaco">ITENS ENCONTRADOS</h1>
             
-            <asp:GridView runat="server" ID="grdItens" Width="100%" AutoGenerateColumns="false" AllowPaging="false">
+            <asp:GridView runat="server" ID="grdItens" OnRowCommand="grdItens_RowCommand" CssClass="grid" Width="100%" AutoGenerateColumns="false" AllowPaging="false">
                 <Columns>
                     <asp:BoundField DataField="nomeitem" HeaderText="Nome do Item" />
                     <asp:BoundField DataField="descricao" HeaderText="Descrição" />
-                    <asp:BoundField DataField="lugar" HeaderText="Lugar" />                    
-                </Columns>
+                    <asp:BoundField DataField="lugar" HeaderText="Lugar" />
+                    <asp:ButtonField ButtonType="Button" HeaderText="Status" ControlStyle-CssClass="btn btn-success"/>
+                 </Columns>
             </asp:GridView>
 
 

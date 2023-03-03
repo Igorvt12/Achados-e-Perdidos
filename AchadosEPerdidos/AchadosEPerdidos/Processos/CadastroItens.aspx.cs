@@ -129,17 +129,43 @@ namespace AchadosEPerdidos.Processos
             txtData.Text = "";
             txtNomePessoa.Text = "";
             txtEmail.Text = "";
-
         }
 
         protected void btnPesquisar_Click(object sender, EventArgs e)
         {
-            
             var itens = new Negocio.Item().Read("", txtPesqNome.Text, txtLugar.Text, txtDescricao.Text);
             Session["dados"] = itens;
             grdItens.DataSource = itens;
             grdItens.DataBind();
-           
+        }
+
+
+        protected void OnRowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                int index = e.Row.RowIndex + (grdItens.PageIndex * grdItens.PageCount);
+                var item = ((List<Modelo.Item>)Session["dados"])[index];
+
+
+                if (Session["funcionario_logado"] == null)
+                {
+                    if (item.Status == true)
+                    {
+                        e.Row.Cells[3].Text = "Encontrado";
+                    }
+                }
+            }
+        }
+
+        protected void grdItens_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+
         }
     }
+
 }
+
+
+
+
