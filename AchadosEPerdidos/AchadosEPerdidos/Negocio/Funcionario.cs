@@ -56,7 +56,7 @@ namespace AchadosEPerdidos.Negocio
             {
                 return false;
             }
-            return true;
+            return false;
         }
     }
 }
