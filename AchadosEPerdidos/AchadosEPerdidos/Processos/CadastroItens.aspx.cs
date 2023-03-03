@@ -129,43 +129,9 @@ namespace AchadosEPerdidos.Processos
             txtData.Text = "";
             txtNomePessoa.Text = "";
             txtEmail.Text = "";
+
         }
-
-        protected void btnPesquisar_Click(object sender, EventArgs e)
-        {
-
-            if (txtPesqNome.Text == "")
-            {
-                lblPesquisar.Text = "Insira o nome de algum objeto!";
-                return;
-            }
-            else
-                lblPesquisar.Text = "";
-
-            var itens = new Negocio.Item().Read("", txtPesqNome.Text, txtLugar.Text, txtDescricao.Text, rdoStatus.SelectedValue);
-            Session["dados"] = itens;
-            grdItens.DataSource = itens;
-            grdItens.DataBind();    
-           
-
-        protected void OnRowDataBound(object sender, GridViewRowEventArgs e)
-        {
-            if (e.Row.RowType == DataControlRowType.DataRow)
-            {
-                int index = e.Row.RowIndex + (grdItens.PageIndex * grdItens.PageCount);
-                var item = ((List<Modelo.Item>)Session["dados"])[index];
-
-
-                if (Session["funcionario_logado"] == null)
-                {
-                    if (item.Status == true)
-                    {
-                        e.Row.Cells[3].Text = "Encontrado";
-                    }
-                }
-            }
-        }     
-        protected void grdItens_RowCommand(Object sender, GridViewCommandEventArgs e)
+        protected void grdItens_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             int index = Convert.ToInt32(e.CommandArgument);
             var itens = (List<Modelo.Item>)Session["dados"];
@@ -183,6 +149,7 @@ namespace AchadosEPerdidos.Processos
             }
         }
 
+
         protected void grdItens_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             var itens = (List<Negocio.Item>)Session["dados"];
@@ -190,8 +157,44 @@ namespace AchadosEPerdidos.Processos
             grdItens.DataSource = itens;
             grdItens.DataBind();
         }
-    }
 
+        protected void btnPesquisar_Click(object sender, EventArgs e)
+        {
+
+            if (txtPesqNome.Text == "")
+            {
+                lblPesquisar.Text = "Insira o nome de algum objeto!";
+                return;
+            }
+            else
+                lblPesquisar.Text = "";
+
+            var itens = new Negocio.Item().Read("", txtPesqNome.Text, txtLugar.Text, txtDescricao.Text, rdoStatus.SelectedValue);
+            Session["dados"] = itens;
+            grdItens.DataSource = itens;
+            grdItens.DataBind();
+        }
+        protected void OnRowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                int index = e.Row.RowIndex + (grdItens.PageIndex * grdItens.PageCount);
+                var item = ((List<Modelo.Item>)Session["dados"])[index];
+
+
+                if (Session["funcionario_logado"] == null)
+                {
+                    e.Row.Cells[3].Text = "PEndente";
+                }
+                    if (item.Status == true)
+                    {
+                        e.Row.Cells[3].Text = "Encontrado";
+                    }
+            }
+        }
+
+
+    }
 }
 
 
