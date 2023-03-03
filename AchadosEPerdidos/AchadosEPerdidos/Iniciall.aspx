@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Iniciall.aspx.cs" Inherits="AchadosEPerdidos.Iniciall" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <link href="FolhaEstilo.css" rel="stylesheet" type="text/css" />
+    <link href="Folhas de Estilos/EstiloLogin.css" rel="stylesheet" type="text/css" />
     <div class="container" style="position: relative; background-color: white;"></div>
     <div class="col-sm-3"></div>
     <div class="col-sm-6">
@@ -46,9 +46,7 @@
                     
                     <asp:Button runat="server" ID="btnCreateFuncionario" Text="Criar Funcionario" CssClass="BotãoRed" OnClick="btnCreateFuncionario_Click" />
                     
-                    <br /><br />                    
-                  
-
+                    <br /><br />                                      
                 </asp:Panel>                        
             </div>
                 
