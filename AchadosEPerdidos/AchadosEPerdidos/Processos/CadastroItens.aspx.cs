@@ -134,12 +134,45 @@ namespace AchadosEPerdidos.Processos
 
         protected void btnPesquisar_Click(object sender, EventArgs e)
         {
-            
-            var itens = new Negocio.Item().Read("", txtPesqNome.Text, txtLugar.Text, txtDescricao.Text);
+            if (txtPesqNome.Text == "")
+            {
+                lblPesquisar.Text = "Insira o nome de algum objeto!";
+                return;
+            }
+            else
+                lblPesquisar.Text = "";
+
+            var itens = new Negocio.Item().Read("", txtPesqNome.Text, txtLugar.Text, txtDescricao.Text, rdoStatus.SelectedValue);
             Session["dados"] = itens;
             grdItens.DataSource = itens;
-            grdItens.DataBind();
+            grdItens.DataBind();    
            
+        }
+
+        protected void grdItens_RowCommand(Object sender, GridViewCommandEventArgs e)
+        {
+            int index = Convert.ToInt32(e.CommandArgument);
+            var itens = (List<Modelo.Item>)Session["dados"];
+
+            if (e.CommandName == "excluir")
+            {
+                if (new Negocio.Item().Delete(itens[index].Id))
+                    SiteMaster.ExibirAlert(this, "Item excluído com sucesso!");
+                btnPesquisar_Click(null, null);
+            }
+
+            if (e.CommandName == "editar")
+            {
+                //
+            }
+        }
+
+        protected void grdItens_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            var itens = (List<Negocio.Item>)Session["dados"];
+            grdItens.PageIndex = e.NewPageIndex;
+            grdItens.DataSource = itens;
+            grdItens.DataBind();
         }
     }
 }
