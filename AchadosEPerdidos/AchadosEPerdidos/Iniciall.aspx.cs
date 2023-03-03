@@ -89,6 +89,12 @@ namespace AchadosEPerdidos
             var funcionario = new Modelo.Funcionario();
             funcionario.Email = txtEmailFuncionarios.Text;
                funcionario.Senha = txtSenha.Text;
+
+            if (new Negocio.Funcionario().VerificaEmailNoBD(funcionario))
+            {
+                SiteMaster.ExibirAlert(this, "Email já cadastrado!");
+            }
+
             if (new Negocio.Funcionario().Login(funcionario))
             {
                 SiteMaster.ExibirAlertRedirecionar(this, "Você está logado como " + txtEmailFuncionarios.Text, "/Processos/CadastroItens.aspx");
