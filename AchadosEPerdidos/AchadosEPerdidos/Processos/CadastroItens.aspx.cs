@@ -147,6 +147,11 @@ namespace AchadosEPerdidos.Processos
             {
                 //
             }
+
+            if (e.CommandName == "status")
+            {
+
+            }
         }
 
 
@@ -174,19 +179,6 @@ namespace AchadosEPerdidos.Processos
             grdItens.DataSource = itens;
             grdItens.DataBind();
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         protected void OnRowDataBound(object sender, GridViewRowEventArgs e)
