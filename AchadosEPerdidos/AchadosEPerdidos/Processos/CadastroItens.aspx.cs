@@ -150,19 +150,9 @@ namespace AchadosEPerdidos.Processos
 
                 if (Session["funcionario_logado"] == null)
                 {
-                    
-                }
-
-
-                if (Session["funcionario_logado"] != null)
-                {
                     if (item.Status == true)
                     {
                         e.Row.Cells[3].Text = "Encontrado";
-                    }
-                    if (item.Status == false)
-                    {
-                        e.Row.Cells[3].Text = "Ainda perdido";
                     }
                 }
             }
