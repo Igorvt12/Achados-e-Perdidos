@@ -58,5 +58,28 @@ namespace AchadosEPerdidos.Negocio
             }
             return false;
         }
+
+        public bool VerificaEmailNoBD(Modelo.Funcionario funcionario)
+        {
+            try
+            {
+                connection.Open();
+                var comando = new MySqlCommand($@"SELECT email FROM funcionarios
+                WHERE email = @email) ", connection);
+                comando.Parameters.Add(new MySqlParameter("email", funcionario.Email));
+                var reader = comando.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    connection.Close();
+                    return true;
+                }
+            }
+            catch (Exception err)
+            {
+                return false;
+            }
+            return false;
+        }
     }
 }
