@@ -65,7 +65,7 @@ namespace AchadosEPerdidos.Negocio
             {
                 connection.Open();
                 var comando = new MySqlCommand($@"SELECT email FROM funcionarios
-                WHERE email = @email) ", connection);
+                WHERE email = @email", connection);
                 comando.Parameters.Add(new MySqlParameter("email", funcionario.Email));
                 var reader = comando.ExecuteReader();
 

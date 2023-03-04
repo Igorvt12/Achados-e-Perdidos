@@ -71,6 +71,14 @@ namespace AchadosEPerdidos
                 return;
             }
 
+            var funcionario = new Modelo.Funcionario();
+            funcionario.Email = txtCreateEmailFuncionario.Text;
+            if (new Negocio.Funcionario().VerificaEmailNoBD(funcionario))
+            {
+                SiteMaster.ExibirAlert(this, "Email já cadastrado no site!");
+                return;
+            }
+
             Modelo.Funcionario NovoFuncionario = new Modelo.Funcionario();
             NovoFuncionario.Nome = txtCreateNomeFuncionario.Text;
             NovoFuncionario.Email = txtCreateEmailFuncionario.Text;
@@ -89,11 +97,6 @@ namespace AchadosEPerdidos
             var funcionario = new Modelo.Funcionario();
             funcionario.Email = txtEmailFuncionarios.Text;
                funcionario.Senha = txtSenha.Text;
-
-            if (new Negocio.Funcionario().VerificaEmailNoBD(funcionario))
-            {
-                SiteMaster.ExibirAlert(this, "Email já cadastrado!");
-            }
 
             if (new Negocio.Funcionario().Login(funcionario))
             {
