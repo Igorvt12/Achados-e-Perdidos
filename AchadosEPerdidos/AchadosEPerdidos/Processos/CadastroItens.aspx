@@ -2,7 +2,9 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <link href="../Folhas de Estilos/EstiloCadastro.css" rel="stylesheet" type="text/css" />
-
+     <div class="container-fluid ContainerDeCima">
+            <h2 class="FraseContainer ">Achados e Perdidos</h2>
+        </div>
 
     <h2>Insira as informações do item encontrado/perdido</h2>
     <div class="col-sm-1"></div>

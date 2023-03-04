@@ -15,7 +15,7 @@
 
     <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <link href="FolhaEstilo.css" rel="stylesheet" type="text/css" />
+    <link href="Folhas de Estilos/EstiloCadastro.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <form runat="server">
@@ -40,9 +40,7 @@
         </asp:ScriptManager>
         
         
-        <div class="container-fluid ContainerDeCima">
-            <h2 class="FraseContainer ">Achados e Perdidos</h2>;
-        </div>
+       
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>

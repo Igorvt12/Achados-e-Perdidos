@@ -2,6 +2,10 @@
     
 
 }
+
+.ContainerDeCima {
+    background: linear-gradient(132deg, rgba(181,175,177,1) 0%, rgba(0,0,0,1) 0%, rgba(32,8,14,1) 0%, rgba(181,13,48,1) 100%);
+}
 .Jumbotron { /*Cor da Jumbotron*/
     text-align: left;
     background-color: white;
