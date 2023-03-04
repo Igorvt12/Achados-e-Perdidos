@@ -101,10 +101,10 @@ namespace AchadosEPerdidos
             if (new Negocio.Funcionario().Login(funcionario))
             {
                 SiteMaster.ExibirAlertRedirecionar(this, "Você está logado como " + txtEmailFuncionarios.Text, "/Processos/CadastroItens.aspx");
+                Session["funcionario_logado"] = txtEmailFuncionarios.Text;
                 return;
             }
             SiteMaster.ExibirAlert(this, "Senha ou Email incorreto!");
-            Session["funcionario_logado"] = txtEmailFuncionarios.Text;
         }
 
         protected void btnUsuario_Click(object sender, EventArgs e)

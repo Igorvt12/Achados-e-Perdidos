@@ -188,7 +188,6 @@ namespace AchadosEPerdidos.Processos
                 int index = e.Row.RowIndex + (grdItens.PageIndex * grdItens.PageCount);
                 var item = ((List<Modelo.Item>)Session["dados"])[index];
 
-
                 if (Session["funcionario_logado"] == null)
                 {
                     e.Row.Cells[3].Text = "Ainda perdido";
