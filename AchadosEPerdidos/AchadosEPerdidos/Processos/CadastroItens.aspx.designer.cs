@@ -13,6 +13,33 @@ namespace AchadosEPerdidos.Processos {
     public partial class CadastroItens {
         
         /// <summary>
+        /// Controle btnItemPerdido.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnItemPerdido;
+        
+        /// <summary>
+        /// Controle btnItemAchado.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnItemAchado;
+        
+        /// <summary>
+        /// Controle txtNomePessoa.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtNomePessoa;
+        
+        /// <summary>
         /// Controle txtNomeItem.
         /// </summary>
         /// <remarks>
@@ -29,15 +56,6 @@ namespace AchadosEPerdidos.Processos {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblNomeItem;
-        
-        /// <summary>
-        /// Controle txtNomePessoa.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNomePessoa;
         
         /// <summary>
         /// Controle lblNomePessoa.

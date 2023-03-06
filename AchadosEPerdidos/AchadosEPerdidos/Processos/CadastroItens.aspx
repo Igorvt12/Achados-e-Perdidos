@@ -2,11 +2,11 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <link href="../Folhas de Estilos/EstiloCadastro.css" rel="stylesheet" type="text/css" />
-     <div class="container-fluid ContainerDeCima">
-            <h2 class="FraseContainer ">Achados e Perdidos</h2>
-        </div>
-
-    <h2>Insira as informações do item encontrado/perdido</h2>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <div class="container-fluid ContainerDeCima">
+        <h2 class="FraseContainer ">Achados e Perdidos</h2>
+    </div>
+   
     <div class="col-sm-1"></div>
     <div class="col-sm-10">
         <div class="jumbotron Jumbotron">
@@ -17,54 +17,61 @@
             <h4 class="Frase">Insira as informações necessárias e clique em CADASTRAR ITEM.</h4>
             <br>
             <br />
-            <h3 class="Textos">* Cadastro do Item</h3>
+        </div>
+        <div class="col-sm-12">
             <div class="col-sm-6">
-                <br />
-                <h4 class="Textos">Nome do Item</h4>
-                <asp:TextBox runat="server" ID="txtNomeItem" CssClass="TextBox" placeholder="Digite o nome/tipo do item"></asp:TextBox>
-                <br />
-                <asp:Label runat="server" ID="lblNomeItem" ForeColor="Red"></asp:Label>
-                <br />
-                <br />
-                <br />
-                <h4 class="Textos">Nome</h4>
-                <asp:TextBox runat="server" ID="txtNomePessoa" CssClass="TextBox" placeholder="Digite seu nome"></asp:TextBox>
-                <br />
-                <asp:Label runat="server" ID="lblNomePessoa" ForeColor="Red"></asp:Label>
-                <br />
-                <br />
-                <asp:TextBox runat="server" ID="txtDescricao" CssClass="TextBox" placeholder="Descrição detalhada do item."></asp:TextBox>
-                <br />
-                <asp:Label runat="server" ID="lblDescrição" ForeColor="Red"></asp:Label>
-                <br />
-                <br />
-                <asp:TextBox runat="server" ID="txtLugar" CssClass="TextBox" placeholder="Lugar que foi encontrado"></asp:TextBox>
-                <br />
-                <asp:Label runat="server" ID="lblLugar" ForeColor="Red"></asp:Label>
-                <br />
-                <br />
-                <asp:TextBox runat="server" ID="txtData" CssClass="TextBox" placeholder="Data que foi encontrada"></asp:TextBox>
-                <br />
-                <asp:Label runat="server" ID="lblData" ForeColor="Red"></asp:Label>
-                <br />
-                <br />
-                <asp:TextBox runat="server" ID="txtEmail" CssClass="TextBox" placeholder="Email para contato"></asp:TextBox>
-                <asp:Label runat="server" ID="lblEmail" ForeColor="Red"></asp:Label>
-                <br />
-                <br />
-
-                <asp:Button runat="server" ID="btnCadastrarItem" CssClass="BotãoRed" Text="Cadastrar Item" OnClick="btnCadastrarItem_Click" />
-
-                <br />
+                <asp:Button runat="server" CssClass="ItemPerdidoAchado w3-round" Text="Perdi um item" ID="btnItemPerdido" />               
             </div>
             <div class="col-sm-6">
-                <div class="jumbotron" style="text-align: center; border-color: #b50d3a; border-style: solid; background-color: white;">
-                    <h3  class="Frase">Ao inserir as informações do item ao lado, você ou a pessoa que perdeu poderá consultar os items que foram perdidos na tabela abaixo, através dos filtros.</h3>
-                </div>
+                <asp:Button runat="server" CssClass="ItemPerdidoAchado w3-round" Text="Achei um item" ID="btnItemAchado" />
             </div>
         </div>
     </div>
+    <div class="col-sm-12">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6"> 
+            <h4 class="Textos">Suas informações</h4>
+                 
+            <div class="row">
+                <div class="col-md-12">
+                <asp:TextBox runat="server" Width="100%" ID="txtNomePessoa" CssClass="TextBox" placeholder="Digite seu nome"></asp:TextBox>  
+                </div>   
+            </div>                  
+            <br /><br />            
+            <h4 class="Textos">Informações do Item</h4>            
+            <asp:TextBox runat="server" ID="txtNomeItem" CssClass="TextBox" placeholder="Digite o nome/tipo do item"></asp:TextBox>
+            <br />
+            <asp:Label runat="server" ID="lblNomeItem" ForeColor="Red"></asp:Label>                                    
+            <asp:Label runat="server" ID="lblNomePessoa" ForeColor="Red"></asp:Label>
+            <br />
+            
+            <asp:TextBox runat="server" ID="txtDescricao" CssClass="TextBox" placeholder="Descrição detalhada do item."></asp:TextBox>
+            <br />
+            <asp:Label runat="server" ID="lblDescrição" ForeColor="Red"></asp:Label>
+            <br />
+            
+            <asp:TextBox runat="server" ID="txtLugar" CssClass="TextBox" placeholder="Lugar que foi encontrado"></asp:TextBox>
+            <br />
+            <asp:Label runat="server" ID="lblLugar" ForeColor="Red"></asp:Label>
+            <br />
+            
+            <asp:TextBox runat="server" ID="txtData" CssClass="TextBox" placeholder="Data que foi encontrada"></asp:TextBox>
+            <br />
+            <asp:Label runat="server" ID="lblData" ForeColor="Red"></asp:Label>
+            <br />
+            
+            <asp:TextBox runat="server" ID="txtEmail" CssClass="TextBox" placeholder="Email para contato"></asp:TextBox>
+            <asp:Label runat="server" ID="lblEmail" ForeColor="Red"></asp:Label>
+            <br />
+            <br />
+            <asp:Button runat="server" ID="btnCadastrarItem" CssClass="BotãoRed" Text="Cadastrar Item" OnClick="btnCadastrarItem_Click" />
+            <br />
+        </div>
+        <div class="col-sm-3">
+        </div>
+       
 
+    </div>
     <div class="col-sm-12">
         <div class="jumbotron Jumbotron">
             <h3 class="Textos">*Encontre seu item perdido.</h3>
@@ -76,34 +83,35 @@
             <br />
             <br />
             <div class="col-sm-5">
-            <asp:RadioButtonList runat="server" ID="rdoStatus" RepeatDirection="Horizontal" CssClass="form-control">
-                <asp:ListItem Text="Achados e Perdidos" Value="" Selected="True"></asp:ListItem>
-                <asp:ListItem Text="Somente Achados" Value="1"></asp:ListItem>
-                <asp:ListItem Text="Somente Perdidos" Value="0"></asp:ListItem>
-            </asp:RadioButtonList>
+                <asp:RadioButtonList runat="server" ID="rdoStatus" RepeatDirection="Horizontal" CssClass="form-control">
+                    <asp:ListItem Text="Achados e Perdidos" Value="" Selected="True"></asp:ListItem>
+                    <asp:ListItem Text="Somente Achados" Value="1"></asp:ListItem>
+                    <asp:ListItem Text="Somente Perdidos" Value="0"></asp:ListItem>
+                </asp:RadioButtonList>
             </div>
             <br />
             <br />
             <br />
             <br />
-            
+
             <asp:Button runat="server" ID="btnPesquisar" CssClass="BotãoRed" Text="Pesquisar Item" OnClick="btnPesquisar_Click" />
             <asp:Label runat="server" ID="lblPesquisar" ForeColor="Red"></asp:Label>
-            <br /><br />
+            <br />
+            <br />
 
             <h1 class="text-center" style="color: white; font-family: Monaco">ITENS ENCONTRADOS</h1>
-            
+
             <asp:GridView runat="server" ID="grdItens" OnRowCommand="grdItens_RowCommand" OnRowDataBound="OnRowDataBound" OnPageIndexChanging="grdItens_PageIndexChanging" CssClass="Grid" Width="100%" AutoGenerateColumns="false" AllowPaging="false">
                 <Columns>
                     <asp:BoundField DataField="nomeitem" HeaderText="Nome do Item" />
                     <asp:BoundField DataField="descricao" HeaderText="Descrição" />
 
-                    <asp:BoundField DataField="lugar" HeaderText="Lugar" />                    
-                    <asp:ButtonField ButtonType="Button" CommandName="status" Text="Alterar Status para encontrado" ControlStyle-CssClass="btn btn-success"/>                    
+                    <asp:BoundField DataField="lugar" HeaderText="Lugar" />
+                    <asp:ButtonField ButtonType="Button" CommandName="status" Text="Alterar Status para encontrado" ControlStyle-CssClass="btn btn-success" />
                     <asp:ButtonField ButtonType="Link" CommandName="editar" ControlStyle-CssClass="btn btn-warning" Text="Editar" />
-                    <asp:ButtonField ButtonType="Link" CommandName="excluir" ControlStyle-CssClass="btn btn-danger" Text="Excluir" />                              
-                    
-                 </Columns>
+                    <asp:ButtonField ButtonType="Link" CommandName="excluir" ControlStyle-CssClass="btn btn-danger" Text="Excluir" />
+
+                </Columns>
 
             </asp:GridView>
 
