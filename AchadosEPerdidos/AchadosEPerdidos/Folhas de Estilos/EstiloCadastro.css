@@ -3,6 +3,7 @@
 
 .ContainerDeCima {
     background: linear-gradient(132deg, rgba(181,175,177,1) 0%, rgba(0,0,0,1) 0%, rgba(32,8,14,1) 0%, rgba(181,13,48,1) 100%);
+    width:100%;
 }
 
 .Jumbotron { /*Cor da Jumbotron*/
@@ -75,4 +76,13 @@
     width: 400px;
     font-size: 24px;
     border:0px solid;
+}
+
+.radio {
+    border-color: #b50d3a;
+    font-family: "Montserrat-Regular", sans-serif;
+    color: #b50d3a;
+    height: 100px;
+    text-align: center;
+    width:150px;
 }
