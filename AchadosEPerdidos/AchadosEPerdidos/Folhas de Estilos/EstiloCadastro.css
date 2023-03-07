@@ -3,6 +3,7 @@
 
 .ContainerDeCima {
     background: linear-gradient(132deg, rgba(181,175,177,1) 0%, rgba(0,0,0,1) 0%, rgba(32,8,14,1) 0%, rgba(181,13,48,1) 100%);
+    width:100%;
 }
 
 .Jumbotron { /*Cor da Jumbotron*/
@@ -34,20 +35,21 @@
     border-color: #b50d3a;
     font-family: "Montserrat",sans-serif;
     font-weight: 300;
+    text-align:center;
 }
 
 .TextBox { /*Modificações das TextBox*/
-    width: 900px;
+    display:block;
     height: 34px;
-    padding: 6px 12px;
+    width: 100%;
     position: center;
+    padding: 6px 12px;
     font-size: 14px;
     line-height: 1.42857;
-    color: #555;
     background-color: #f1f1f1;
-    background-image: none;
+    color: #555;
     border: 1px solid #eee;
-    border-radius: 4px;
+    border-radius: 4px;    
 }
 
 .BotãoRed { /*Modificações dos Botões*/
@@ -64,4 +66,23 @@
 .Grid {
     border-color: white;
     color: red;
+}
+
+.ItemPerdidoAchado {
+    background: linear-gradient(132deg, rgba(181,175,177,1) 0%, rgba(0,0,0,1) 0%, rgba(32,8,14,1) 0%, rgba(181,13,48,1) 100%);
+    font-family: "Montserrat-Regular", sans-serif;
+    color: white;
+    text-align: center;
+    width: 400px;
+    font-size: 24px;
+    border:0px solid;
+}
+
+.radio {
+    border-color: #b50d3a;
+    font-family: "Montserrat-Regular", sans-serif;
+    color: #b50d3a;
+    height: 100px;
+    text-align: center;
+    width:150px;
 }
