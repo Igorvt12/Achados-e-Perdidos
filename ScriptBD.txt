@@ -1,0 +1,22 @@
+CREATE DATABASE achadostcc;
+USE achadostcc;
+
+CREATE TABLE funcionarios(
+    id int PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    nome varchar(200),
+    senha varchar (200),
+    email varchar(200)
+    );
+    
+CREATE TABLE itens(
+    id int PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    nomeitem varchar(200),
+    lugar varchar(200),
+    descricao varchar(200),
+    imagem varchar(200),
+    dataencontrada date,
+    status boolean,
+    nomepessoa varchar(200),
+    email varchar(200),
+    id_funcionario int);
+    
