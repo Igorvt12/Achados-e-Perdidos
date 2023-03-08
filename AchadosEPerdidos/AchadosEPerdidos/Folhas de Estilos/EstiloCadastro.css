@@ -1,9 +1,10 @@
 ﻿body {
+    scrol-l
 }
 
 .ContainerDeCima {
     background: linear-gradient(132deg, rgba(181,175,177,1) 0%, rgba(0,0,0,1) 0%, rgba(32,8,14,1) 0%, rgba(181,13,48,1) 100%);
-    width:100%;
+    width:200%;
 }
 
 .Jumbotron { /*Cor da Jumbotron*/
@@ -86,3 +87,11 @@
     text-align: center;
     width:150px;
 }
+
+.FraseContainer {
+    color: white;
+    font-family: "Montserrat-Regular", sans-serif;
+    text-align:left;
+
+}
+

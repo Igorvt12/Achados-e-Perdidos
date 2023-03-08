@@ -3,27 +3,36 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <link href="../Folhas de Estilos/EstiloCadastro.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    
+    
+    
     <div class="container-fluid ContainerDeCima" style="width: 100%;">
-        <h2 class="FraseContainer ">Achados e Perdidos</h2>
+        <h2 class="FraseContainer">Achados e Perdidos</h2>
     </div>
-
+    
     <div class="col-sm-1"></div>
+    
     <div class="col-sm-10">
         <div class="jumbotron Jumbotron">
             <h2 class="Titulo">Cadastro de Itens</h2>
             <br />
             <h4 class="Frase">Você que perdeu ou achou algum item que não seja de sua posse, pode inserir as informações abaixo.</h4>
             <br />
-            <h4 class="Frase">Insira as informações necessárias e clique em CADASTRAR ITEM.</h4>
+            <br />
+            <h4 class="Frase">Primeiro, informe se perdeu ou achou o item, e em seguida, insira as informações necessárias e clique em CADASTRAR ITEM.</h4>
+
         </div>
 
-        <div class="col-sm-12">
-            <div class="col-sm-6">
-                <asp:Button runat="server" CssClass="ItemPerdidoAchado w3-round" Text="Perdi um item" ID="btnItemPerdido" />
-            </div>
-            <div class="col-sm-6">
-                <asp:Button runat="server" CssClass="ItemPerdidoAchado w3-round" Text="Achei um item" ID="btnItemAchado" />
+        <div id="middle">
+            <div class="col-sm-12">
+                <div class="col-sm-6">
+                    <asp:Button runat="server" CssClass="ItemPerdidoAchado w3-round"  Text="Perdi um item" ID="btnItemPerdido" />
+                </div>
+                <div class="col-sm-6">
+                    <asp:Button runat="server" CssClass="ItemPerdidoAchado w3-round"  Text="Achei um item" ID="btnItemAchado" />
+                </div>
             </div>
         </div>
     </div>
@@ -35,6 +44,8 @@
             <div class="row">
                 <div class="col-md-12">
                     <asp:TextBox runat="server" Width="100%" ID="txtNomePessoa" CssClass="TextBox" placeholder="Digite seu nome"></asp:TextBox>
+                    <br />
+                    <asp:TextBox runat="server" Width="100%" ID="txtCpfPessoa" CssClass="TextBox" placeholder="Digite seu CPF (Caso de solicitação do item, deve-se apresentar o CPF.)"></asp:TextBox>
                 </div>
             </div>
             <br />
@@ -84,7 +95,7 @@
             <br />
             <asp:TextBox runat="server" ID="txtPesqNome" CssClass="TextBox" placeholder="Insira o nome para pesquisa."></asp:TextBox>
             <br />
-           
+
             <div class="col-sm-12">
                 <asp:RadioButtonList runat="server" ID="rdoStatus" RepeatDirection="Vertical" CssClass="form-control radio">
                     <asp:ListItem Text="Todos os itens" Value="" Selected="True"></asp:ListItem>
@@ -115,6 +126,11 @@
                 </Columns>
 
             </asp:GridView>
+
+            <div class="container-fluid ContainerDeCima">
+                <h3 class="FraseContainer">Seu item já foi encontrado? </h3>
+                <h4 class="FraseContainer"> Entre em contato com o setor de administração presencialmente para solicitar a entrega de seu item.</h4>
+            </div>
 
 
 
