@@ -15,7 +15,7 @@
             <div class="col-sm-2">
                 <h5><a class="FraseContainer" style="text-align: right;" href="#middle">Cadastrar um Item</a></h5>
             </div>
-        </div>
+        </div>  
     </div>
 
     
