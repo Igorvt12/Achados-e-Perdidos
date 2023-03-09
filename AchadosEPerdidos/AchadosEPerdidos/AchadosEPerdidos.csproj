@@ -160,6 +160,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="app.config" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Imagens\ilustrativa.jpeg" />
     <Content Include="Iniciall.aspx" />
     <Content Include="Processos\CadastroItens.aspx" />
     <Content Include="Scripts\bootstrap.js" />

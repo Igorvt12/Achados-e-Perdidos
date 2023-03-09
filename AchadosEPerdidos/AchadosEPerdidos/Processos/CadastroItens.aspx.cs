@@ -170,8 +170,7 @@ namespace AchadosEPerdidos.Processos
         }
 
         protected void btnPesquisar_Click(object sender, EventArgs e)
-        {
-
+        {           
             if (txtPesqNome.Text == "")
             {
                 lblPesquisar.Text = "Insira o nome de algum objeto!";

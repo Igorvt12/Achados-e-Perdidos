@@ -1,10 +1,10 @@
 ﻿body {
-    scrol-l
+    
 }
 
 .ContainerDeCima {
     background: linear-gradient(132deg, rgba(181,175,177,1) 0%, rgba(0,0,0,1) 0%, rgba(32,8,14,1) 0%, rgba(181,13,48,1) 100%);
-    width:200%;
+
 }
 
 .Jumbotron { /*Cor da Jumbotron*/
@@ -19,6 +19,7 @@
     line-height: 1.4;
     color: #b50d3a;
     font-weight: 500;
+    
 }
 
 .Frase {
@@ -90,8 +91,30 @@
 
 .FraseContainer {
     color: white;
-    font-family: "Montserrat-Regular", sans-serif;
-    text-align:left;
-
+    font-family: "Montserrat-Regular", sans-serif;    
 }
 
+.FraseImage {
+    text-align: center;
+    color: white;
+    font-family: "Montserrat-Regular", sans-serif;
+    font-size:20px;    
+}
+
+.demo-wrap {
+    overflow: hidden;
+    position: relative;
+}
+
+.demo-bg {
+    opacity: 0.6;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+}
+
+.demo-content {
+    position: relative;
+}
