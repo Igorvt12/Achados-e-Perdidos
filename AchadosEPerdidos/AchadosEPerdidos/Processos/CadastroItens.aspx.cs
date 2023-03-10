@@ -15,6 +15,12 @@ namespace AchadosEPerdidos.Processos
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            txtNomePessoa.Enabled = false;
+            txtNomeItem.Enabled = false;
+            txtDescricao.Enabled = false;
+            txtLugar.Enabled = false;
+            txtData.Enabled = false;
+            txtEmail.Enabled = false;
             if (!IsPostBack)
             {
             }
@@ -164,8 +170,7 @@ namespace AchadosEPerdidos.Processos
         }
 
         protected void btnPesquisar_Click(object sender, EventArgs e)
-        {
-
+        {           
             if (txtPesqNome.Text == "")
             {
                 lblPesquisar.Text = "Insira o nome de algum objeto!";
@@ -199,7 +204,7 @@ namespace AchadosEPerdidos.Processos
             }
         }
 
-
+        
     }
 }
 
