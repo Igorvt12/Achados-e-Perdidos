@@ -65,10 +65,13 @@
     border-color: white;
 }
 
-.Grid {
-    border-color: white;
-    color: red;
+.Grid {    
+    color: #b50d3a;
     font-family: "Montserrat", sans-serif;
+    border: 2px solid #b50d3a;
+    border-radius: 25px;
+    font-size:20px;
+    text-align:center;
 }
 
 .ItemPerdidoAchado {
@@ -84,11 +87,13 @@
 
 .radio {
     border-color: #b50d3a;
-    font-family: "Montserrat-Regular", sans-serif;
+    font-family: "Montserrat", sans-serif;
     color: #b50d3a;
     height: 100px;
     text-align: center;
-    width:150px;
+    width:200px;
+    font-weight:900;
+   
 }
 
 .FraseContainer {
@@ -103,20 +108,7 @@
     font-size:20px;    
 }
 
-.demo-wrap {
-    overflow: hidden;
-    position: relative;
-}
 
-.demo-bg {
-    opacity: 0.6;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: auto;
-}
-
-.demo-content {
-    position: relative;
+.lbl {
+    color: #b50d3a;
 }
