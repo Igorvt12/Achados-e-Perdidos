@@ -14,13 +14,7 @@ namespace AchadosEPerdidos.Processos
     public partial class CadastroItens : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-            txtNomePessoa.Enabled = false;
-            txtNomeItem.Enabled = false;
-            txtDescricao.Enabled = false;
-            txtLugar.Enabled = false;
-            txtData.Enabled = false;
-            txtEmail.Enabled = false;
+        {           
             if (!IsPostBack)
             {
             }
