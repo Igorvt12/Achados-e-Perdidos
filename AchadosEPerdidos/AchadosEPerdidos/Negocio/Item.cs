@@ -114,7 +114,6 @@ namespace AchadosEPerdidos.Negocio
                                                 lugar = @lugar,
                                                 descricao = @descricao,
                                                 dataencontrada = @dataencontrada,
-                                                status = @status,
                                                 nomepessoa = @nomepessoa,
                                                 email = @email,
                                                 id_funcionario = @id_funcionario WHERE id = @id", connection);
@@ -123,7 +122,6 @@ namespace AchadosEPerdidos.Negocio
                 comando.Parameters.Add(new MySqlParameter("lugar", item.Lugar));
                 comando.Parameters.Add(new MySqlParameter("descricao", item.Descricao));
                 comando.Parameters.Add(new MySqlParameter("dataencontrada", item.Data));
-                comando.Parameters.Add(new MySqlParameter("status", item.Status));
                 comando.Parameters.Add(new MySqlParameter("nomepessoa", item.NomePessoa));
                 comando.Parameters.Add(new MySqlParameter("email", item.Email));
                 comando.Parameters.Add(new MySqlParameter("id_funcionario", item.Id_Funcionario));
@@ -148,6 +146,27 @@ namespace AchadosEPerdidos.Negocio
                 connection.Close();
             }
             catch
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public bool UpdateStatus(Modelo.Item item)
+        {
+            try
+            {
+                connection.Open();
+                var comando = new MySqlCommand($@"UPDATE itens SET
+                                                status = @status
+                                                WHERE id = @id", connection);
+
+                comando.Parameters.Add(new MySqlParameter("status", item.Status));
+                comando.Parameters.Add(new MySqlParameter("id", item.Id));
+                comando.ExecuteNonQuery();
+                connection.Close();
+            }
+            catch(Exception erro)
             {
                 return false;
             }

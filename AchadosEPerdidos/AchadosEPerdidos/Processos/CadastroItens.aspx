@@ -116,6 +116,13 @@
 
 
 
+                    <asp:BoundField DataField="lugar" HeaderText="Lugar" />
+                    <asp:ButtonField ButtonType="Button" CommandName="status" Text="Alterar Status para encontrado" ControlStyle-CssClass="btn btn-success"  />
+                    <asp:ButtonField ButtonType="Link" CommandName="editar" ControlStyle-CssClass="btn btn-warning" Text="Editar" />
+                    <asp:ButtonField ButtonType="Link" CommandName="excluir" ControlStyle-CssClass="btn btn-danger" Text="Excluir" />
+                </Columns>
+
+
     <div class="col-sm-12">
         <div class="jumbotron Jumbotron">
             <h3 style="font-weight: 900" class="Textos">*Encontre seu item perdido.</h3>
@@ -163,7 +170,6 @@
         <div class="col-sm-3"></div>
     </div>
 
-    
     <div class="row">
         <div class="col-sm-12">
             <div class="container-fluid ContainerDeCima">
@@ -173,5 +179,6 @@
             </div>
         </div>
     </div>
+
     <br />
 </asp:Content>
