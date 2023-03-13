@@ -15,13 +15,15 @@
             <div class="col-sm-2">
                 <h5><a class="FraseContainer" style="text-align: right;" href="#middle">Cadastrar um Item</a></h5>
             </div>
-        </div>  
+        </div>
     </div>
 
-    
-    <div class="col-12" style="background-image: url(/Imagens/ilustrativa.jpeg); height:500px;">
-        <br /><br /><br />
-        <div class="col-sm-12" style="background-color:coral;">
+
+    <div class="col-12" style="background-image: url(/Imagens/ilustrativa.jpeg); height: 500px;">
+        <br />
+        <br />
+        <br />
+        <div class="col-sm-12" style="background-color: coral;">
             <div class="col-sm-2"></div>
             <div class="col-sm-8">
                 <h3>Plataforma online com objetivo único de auxiliar pessoas a acharem itens pessoais que foram perdidos ou encontrados em certos estabelecimentos
@@ -30,29 +32,33 @@
                 </h3>
             </div>
         </div>
-        
+
     </div>
 
     <div class="col-sm-1"></div>
 
     <div class="col-sm-10">
-        <div class="jumbotron Jumbotron">
-            <h2 class="Titulo">Cadastro de Itens</h2>
-            <br />
-            <h4 class="Frase">Você que perdeu ou achou algum item que não seja de sua posse, pode inserir as informações abaixo.</h4>
-            <br />
-            <br />
-            <h4 class="Frase">Primeiro, informe se perdeu ou achou o item, e em seguida, insira as informações necessárias e clique em CADASTRAR ITEM.</h4>
+        <div class="row">
+            <div class="jumbotron Jumbotron">
+                <h2 class="Titulo">Cadastro de Itens</h2>
+                <br />
+                <h4 class="Frase">Você que perdeu ou achou algum item que não seja de sua posse, pode inserir as informações abaixo.</h4>
+                <br />
+                <br />
+                <h4 class="Frase">Primeiro, informe se perdeu ou achou o item, e em seguida, insira as informações necessárias e clique em CADASTRAR ITEM.</h4>
 
+            </div>
         </div>
 
         <div id="middle">
             <div class="col-sm-12">
-                <div class="col-sm-6">
-                    <asp:Button runat="server" CssClass="ItemPerdidoAchado w3-round" Text="Perdi um item" ID="btnItemPerdido" />
-                </div>
-                <div class="col-sm-6">
-                    <asp:Button runat="server" CssClass="ItemPerdidoAchado w3-round" Text="Achei um item" ID="btnItemAchado" />
+                <div class="row">
+                    <div class="col-sm-6" style="text-align: center;">
+                        <asp:Button runat="server" CssClass="ItemPerdidoAchado w3-round" Text="Perdi um item" ID="btnItemPerdido" />
+                    </div>
+                    <div class="col-sm-6" style="text-align: center;">
+                        <asp:Button runat="server" CssClass="ItemPerdidoAchado w3-round" Text="Achei um item" ID="btnItemAchado" />
+                    </div>
                 </div>
             </div>
         </div>
@@ -60,7 +66,7 @@
     <div class="col-sm-12">
         <div class="col-sm-3"></div>
         <div class="col-sm-6">
-            <h4 class="Textos">Suas informações</h4>
+            <h4 style="font-weight: 900" class="Textos">Suas informações</h4>
 
             <div class="row">
                 <div class="col-md-12">
@@ -71,7 +77,7 @@
             </div>
             <br />
             <br />
-            <h4 class="Textos">Informações do Item</h4>
+            <h4 style="font-weight: 900" class="Textos">Informações do Item</h4>
             <asp:TextBox runat="server" ID="txtNomeItem" CssClass="TextBox" placeholder="Digite o nome/tipo do item"></asp:TextBox>
             <br />
             <asp:Label runat="server" ID="lblNomeItem" ForeColor="Red"></asp:Label>
@@ -107,53 +113,65 @@
 
 
     </div>
+
+
+
     <div class="col-sm-12">
         <div class="jumbotron Jumbotron">
-            <h3 class="Textos">*Encontre seu item perdido.</h3>
+            <h3 style="font-weight: 900" class="Textos">*Encontre seu item perdido.</h3>
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6">
+                    <br />
+                    <h4 class="Frase">Escolha alguns dos filtros e insira alguma informação de seu item.</h4>
+                    <br />
+                    <asp:TextBox runat="server" ID="txtPesqNome" CssClass="TextBox" placeholder="Insira o nome para pesquisa."></asp:TextBox>
+                    <asp:Label CssClass="lbl" runat="server" ID="lblPesquisar"></asp:Label>
+                    <div style="text-align: center">
+                        <asp:Button runat="server" ID="btnPesquisar" CssClass="BotãoRed" Text="Pesquisar Item" OnClick="btnPesquisar_Click" />
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-4">
+                            <br />
+                            <br />
+                            <div style="text-align: center">
+                                <asp:RadioButtonList runat="server" ID="rdoStatus" RepeatDirection="Vertical" CssClass="form-control radio">
+                                    <asp:ListItem Text="Todos os itens" Value="" Selected="True"></asp:ListItem>
+                                    <asp:ListItem Text="Somente achados" Value="1"></asp:ListItem>
+                                    <asp:ListItem Text="Somente perdidos" Value="0"></asp:ListItem>
+                                </asp:RadioButtonList>
+                            </div>
+                        </div>
+                        <div class="col-sm-4"></div>
+                    </div>
+                    <br />
 
-            <br />
-            <h4 class="Frase">Escolha alguns dos filtros e insira alguma informação de seu item.</h4>
-            <br />
-            <asp:TextBox runat="server" ID="txtPesqNome" CssClass="TextBox" placeholder="Insira o nome para pesquisa."></asp:TextBox>
-            <br />
-
-            <div class="col-sm-12">
-                <asp:RadioButtonList runat="server" ID="rdoStatus" RepeatDirection="Vertical" CssClass="form-control radio">
-                    <asp:ListItem Text="Todos os itens" Value="" Selected="True"></asp:ListItem>
-                    <asp:ListItem Text="Somente achados" Value="1"></asp:ListItem>
-                    <asp:ListItem Text="Somente perdidos" Value="0"></asp:ListItem>
-                </asp:RadioButtonList>
+                    <asp:GridView runat="server" ID="grdItens" OnRowCommand="grdItens_RowCommand" OnRowDataBound="OnRowDataBound" OnPageIndexChanging="grdItens_PageIndexChanging" CssClass="Grid" Width="100%" AutoGenerateColumns="false" AllowPaging="false">
+                        <Columns>
+                            <asp:BoundField DataField="nomeitem" HeaderText="Nome do Item" />
+                            <asp:BoundField DataField="descricao" HeaderText="Descrição" />
+                            <asp:BoundField DataField="lugar" HeaderText="Lugar" />
+                            <asp:ButtonField ButtonType="Button" HeaderText="Status" CommandName="status" Text="Alterar Status para encontrado" ControlStyle-CssClass="btn btn-success" />
+                            <asp:ButtonField ButtonType="Link" HeaderText="Atualizar" CommandName="editar" ControlStyle-CssClass="btn btn-warning" Text="Editar" />
+                            <asp:ButtonField ButtonType="Link" HeaderText="Excluir" CommandName="excluir" ControlStyle-CssClass="btn btn-danger" Text="Excluir" />
+                        </Columns>
+                    </asp:GridView>
+                </div>
             </div>
-            <br />
-            <br />
-            <br />
-            <br />
-            <asp:Button runat="server" ID="btnPesquisar" CssClass="BotãoRed" Text="Pesquisar Item" OnClick="btnPesquisar_Click" />
-            <asp:Label runat="server" ID="lblPesquisar" ForeColor="Red"></asp:Label>
-            <br />
-            <br />
-            <h1 class="text-center" style="color: white; font-family: Monaco">ITENS ENCONTRADOS</h1>
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
 
-            <asp:GridView runat="server" ID="grdItens" OnRowCommand="grdItens_RowCommand" OnRowDataBound="OnRowDataBound" OnPageIndexChanging="grdItens_PageIndexChanging" CssClass="Grid" Width="100%" AutoGenerateColumns="false" AllowPaging="false">
-                <Columns>
-                    <asp:BoundField DataField="nomeitem" HeaderText="Nome do Item" />
-                    <asp:BoundField DataField="descricao" HeaderText="Descrição" />
-
-                    <asp:BoundField DataField="lugar" HeaderText="Lugar" />
-                    <asp:ButtonField ButtonType="Button" CommandName="status" Text="Alterar Status para encontrado" ControlStyle-CssClass="btn btn-success" />
-                    <asp:ButtonField ButtonType="Link" CommandName="editar" ControlStyle-CssClass="btn btn-warning" Text="Editar" />
-                    <asp:ButtonField ButtonType="Link" CommandName="excluir" ControlStyle-CssClass="btn btn-danger" Text="Excluir" />
-                </Columns>
-
-            </asp:GridView>
-
-            <div class="container-fluid ContainerDeCima" style="height:190px">
-                <h3 class="FraseContainer" style="padding-left:100px; padding-top:30px;font-weight:600;">Seu item já foi encontrado?</h3>
-                <h4 class="FraseContainer" style="padding-left:100px; padding-top:30px">Entre em contato com o setor de administração presencialmente para solicitar a entrega de seu item.</h4>
+    
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="container-fluid ContainerDeCima">
+                <h3 class="FraseContainer" style="padding-left: 100px; padding-top: 30px; font-weight: 600">Seu item foi encontrado?</h3>
+                <br />
+                <h4 class="FraseContainer" style="padding-left: 100px; padding-top: 30px; font-weight: 600">Compareça até o setor principal para a retirada (Apresentar o CPF)</h4>
             </div>
         </div>
     </div>
-
-
     <br />
 </asp:Content>

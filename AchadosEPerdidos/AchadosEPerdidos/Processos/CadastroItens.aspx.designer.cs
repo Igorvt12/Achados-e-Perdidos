@@ -166,13 +166,13 @@ namespace AchadosEPerdidos.Processos {
         protected global::System.Web.UI.WebControls.TextBox txtPesqNome;
         
         /// <summary>
-        /// Controle rdoStatus.
+        /// Controle lblPesquisar.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rdoStatus;
+        protected global::System.Web.UI.WebControls.Label lblPesquisar;
         
         /// <summary>
         /// Controle btnPesquisar.
@@ -184,13 +184,13 @@ namespace AchadosEPerdidos.Processos {
         protected global::System.Web.UI.WebControls.Button btnPesquisar;
         
         /// <summary>
-        /// Controle lblPesquisar.
+        /// Controle rdoStatus.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPesquisar;
+        protected global::System.Web.UI.WebControls.RadioButtonList rdoStatus;
         
         /// <summary>
         /// Controle grdItens.
