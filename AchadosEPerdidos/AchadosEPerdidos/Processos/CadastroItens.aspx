@@ -143,20 +143,15 @@
                     <asp:ButtonField ButtonType="Button" CommandName="status" Text="Alterar Status para encontrado" ControlStyle-CssClass="btn btn-success" />
                     <asp:ButtonField ButtonType="Link" CommandName="editar" ControlStyle-CssClass="btn btn-warning" Text="Editar" />
                     <asp:ButtonField ButtonType="Link" CommandName="excluir" ControlStyle-CssClass="btn btn-danger" Text="Excluir" />
-
                 </Columns>
 
             </asp:GridView>
 
-            <div class="container-fluid ContainerDeCima">
-                <h3 class="FraseContainer">Seu item já foi encontrado? </h3>
-                <h4 class="FraseContainer">Entre em contato com o setor de administração presencialmente para solicitar a entrega de seu item.</h4>
+            <div class="container-fluid ContainerDeCima" style="height:190px">
+                <h3 class="FraseContainer" style="padding-left:100px; padding-top:30px;font-weight:600;">Seu item já foi encontrado?</h3>
+                <h4 class="FraseContainer" style="padding-left:100px; padding-top:30px">Entre em contato com o setor de administração presencialmente para solicitar a entrega de seu item.</h4>
             </div>
-
-
-
         </div>
-
     </div>
 
 
