@@ -150,7 +150,11 @@ namespace AchadosEPerdidos.Processos
 
             if (e.CommandName == "status")
             {
-
+                var item = itens[index];
+                item.Status = true;
+                new Negocio.Item().UpdateStatus(item);
+                btnPesquisar_Click(null, null);
+                SiteMaster.ExibirAlert(this, "Item encontrado!");
             }
         }
 
