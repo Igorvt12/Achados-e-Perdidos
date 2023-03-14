@@ -185,6 +185,7 @@
     <Content Include="Imagens\ilustrativa.jpeg" />
     <Content Include="Iniciall.aspx" />
     <Content Include="Processos\CadastroItens.aspx" />
+    <Content Include="Processos\EditarItem.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -242,6 +243,13 @@
     </Compile>
     <Compile Include="Processos\CadastroItens.aspx.designer.cs">
       <DependentUpon>CadastroItens.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Processos\EditarItem.aspx.cs">
+      <DependentUpon>EditarItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Processos\EditarItem.aspx.designer.cs">
+      <DependentUpon>EditarItem.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
