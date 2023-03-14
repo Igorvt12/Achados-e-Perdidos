@@ -9,7 +9,7 @@ namespace AchadosEPerdidos
 {
     public partial class SiteMaster : MasterPage
     {
-        public static string ConnectionString = "Server=MYSQL5025.site4now.net;Database=db_a95ead_achados;Uid=a95ead_achados;Pwd=achadostcc123";
+        public static string ConnectionString = "Server=127.0.0.1;User ID=root;Password=root;Database=achadostcc";
         public static string KeyAES = "kjbflkajsb";
         protected void Page_Load(object sender, EventArgs e)
         {
