@@ -10,7 +10,10 @@ namespace AchadosEPerdidos.Processos
 {
     public partial class EditarItem : System.Web.UI.Page
     {
+        private MySqlConnection connection;
+   
         protected void Page_Load(object sender, EventArgs e)
+
         {
             if (!IsPostBack)
             {
@@ -64,8 +67,10 @@ namespace AchadosEPerdidos.Processos
                 lblNomePessoa.Text = "Este campo não pode ficar vazio!";
                 return;
             }
+
             else
                 lblNomePessoa.Text = "";
         }
+
     }
 }
