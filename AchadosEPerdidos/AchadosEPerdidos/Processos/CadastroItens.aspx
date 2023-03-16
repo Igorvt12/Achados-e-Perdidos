@@ -112,7 +112,7 @@
             <div style="text-align: center">
                 <asp:Button runat="server" ID="btnCadastrarItem" CssClass="BotãoRed" Text="Cadastrar Item" OnClick="btnCadastrarItem_Click" />
             </div>
-            <br />
+            
         </div>
         <div class="col-sm-3">
         </div>
@@ -134,6 +134,7 @@
                         <asp:TextBox runat="server" ID="txtPesqNome" CssClass="TextBox" placeholder="Insira o nome para pesquisa."></asp:TextBox>
                         <asp:Label CssClass="lbl" runat="server" ID="lblPesquisar"></asp:Label>
                         <div style="text-align: center">
+                            <br />
                             <asp:Button runat="server" ID="btnPesquisar" CssClass="BotãoRed" Text="Pesquisar Item" OnClick="btnPesquisar_Click" />
                         </div>
                         <div class="row">

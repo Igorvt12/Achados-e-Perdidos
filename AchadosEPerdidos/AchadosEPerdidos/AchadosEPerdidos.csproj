@@ -148,6 +148,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Folhas de Estilos\EstiloCadastro.css" />
     <Content Include="Folhas de Estilos\EstiloLogin.css" />
+    <Content Include="Imagens\login2.jpg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -183,6 +184,8 @@
     <None Include="Properties\PublishProfiles\renanzokk-001-site1 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Imagens\ilustrativa.jpeg" />
+    <Content Include="Imagens\login.jpg" />
+    <Content Include="Imagens\login3.jpg" />
     <Content Include="Iniciall.aspx" />
     <Content Include="Processos\CadastroItens.aspx" />
     <Content Include="Processos\EditarItem.aspx" />

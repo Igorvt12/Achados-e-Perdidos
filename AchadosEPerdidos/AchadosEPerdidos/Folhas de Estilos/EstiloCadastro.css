@@ -60,14 +60,15 @@
 }
 
 .BotãoRed { /*Modificações dos Botões*/
-    background-color: #b50d3a; /*Cor Vermelha*/
+    background: linear-gradient(132deg, rgba(181,175,177,1) 0%, rgba(0,0,0,1) 0%, rgba(32,8,14,1) 0%, rgba(181,13,48,1) 100%);
     color: white;
     font-family: "Montserrat-Regular", sans-serif;
     line-height: 1.42857;
-    border-radius: 4px;
+    border-radius: 25px;
     font-size: 15px;
     height: 40px;
     border-color: white;
+    width:250px;
 }
 
 .Grid {    
@@ -121,4 +122,6 @@
 .lbl {
     color: #b50d3a;
 }
+
+
 

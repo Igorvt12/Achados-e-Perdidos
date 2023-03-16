@@ -11,7 +11,7 @@ namespace AchadosEPerdidos.Processos
     public partial class EditarItem : System.Web.UI.Page
     {
         private MySqlConnection connection;
-        protected void Page_Load(object sender, EventArgs e)
+       /* protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
@@ -28,6 +28,6 @@ namespace AchadosEPerdidos.Processos
                     textoAtivo = "0";
                 rdoAtivo.SelectedValue = textoAtivo;
             }
-        }
+        }*/
     }
 }
