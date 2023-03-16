@@ -25,8 +25,8 @@ namespace AchadosEPerdidos.Negocio
             {
                 connection.Open();
                 var comando = new MySqlCommand($@"INSERT INTO itens
-                                              (nomeitem, lugar, descricao, dataencontrada, status, nomepessoa, email, id_funcionario) VALUES 
-                                              (@nomeitem, @lugar, @descricao, @dataencontrada, 0, @nomepessoa, @email, @id_funcionario)", connection);
+                                              (nomeitem, lugar, descricao, dataencontrada, status, nomepessoa, email, cpf, id_funcionario) VALUES 
+                                              (@nomeitem, @lugar, @descricao, @dataencontrada, 0, @nomepessoa, @email, @cpf @id_funcionario)", connection);
 
                 comando.Parameters.Add(new MySqlParameter("nomeitem", item.NomeItem));
                 comando.Parameters.Add(new MySqlParameter("lugar", item.Lugar));
@@ -35,7 +35,9 @@ namespace AchadosEPerdidos.Negocio
                 comando.Parameters.Add(new MySqlParameter("status", item.Status));
                 comando.Parameters.Add(new MySqlParameter("nomepessoa", item.NomePessoa));
                 comando.Parameters.Add(new MySqlParameter("email", item.Email));
+                comando.Parameters.Add(new MySqlParameter("cpf", item.Cpf));
                 comando.Parameters.Add(new MySqlParameter("id_funcionario", item.Id_Funcionario));
+                
                 comando.ExecuteNonQuery();
                 connection.Close();
             }
@@ -104,6 +106,72 @@ namespace AchadosEPerdidos.Negocio
             return itens;
         }
 
+        public List<Modelo.Item> ReadForUpdate(string id, string nomeitem, string descricao, string lugar, string data, string nomepessoa)
+        {
+            var itens = new List<Modelo.Item>();
+            try
+            {
+                connection.Open();
+                var commando = new MySqlCommand($"SELECT id, nomeitem, descricao, lugar, data, nomepessoa FROM itens WHERE (1=1) ", connection);
+
+                if (id.Equals("") == false)
+                {
+                    commando.CommandText += $" AND id = @id";
+                    commando.Parameters.Add(new MySqlParameter("id", id));
+                }
+                if (nomeitem.Equals("") == false)
+                {
+                    commando.CommandText += $" AND nomeitem like @nomeitem";
+                    commando.Parameters.Add(new MySqlParameter("nomeitem", $"%{nomeitem}%"));
+                }
+                if (descricao.Equals("") == false)
+                {
+                    commando.CommandText += $" AND descricao like @descricao,";
+                    commando.Parameters.Add(new MySqlParameter("descricao", $"%{descricao}%"));
+                }
+                if (lugar.Equals("") == false)
+                {
+                    commando.CommandText += $" AND lugar like @lugar,";
+                    commando.Parameters.Add(new MySqlParameter("lugar", $"%{lugar}%"));
+                }
+                if (lugar.Equals("") == false)
+                {
+                    commando.CommandText += $" AND data like @data,";
+                    commando.Parameters.Add(new MySqlParameter("data", $"%{data}%"));
+                }
+                if (nomepessoa.Equals("") == false)
+                {
+                    commando.CommandText += $" AND lunomepessoa like @nomepessoa";
+                    commando.Parameters.Add(new MySqlParameter("lugar", $"%{lugar}%"));
+                }
+
+
+                var reader = commando.ExecuteReader();
+                while (reader.Read())
+                {
+                    itens.Add(new Modelo.Item
+                    {
+                        NomeItem = reader.GetString("nomeitem"),
+                        Lugar = reader.GetString("descricao"),
+                        Descricao = reader.GetString("lugar"),
+                        Status = reader.GetBoolean("data"),
+                        NomePessoa = reader.GetString("nomepessoa"),
+                        Id = reader.GetInt32("id")
+                    });
+                }
+            }
+
+            catch
+            {
+
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return itens;
+        }
+
         public bool Update(Modelo.Item item)
         {
             try
@@ -114,7 +182,6 @@ namespace AchadosEPerdidos.Negocio
                                                 lugar = @lugar,
                                                 descricao = @descricao,
                                                 dataencontrada = @dataencontrada,
-                                                nomepessoa = @nomepessoa,
                                                 email = @email,
                                                 id_funcionario = @id_funcionario WHERE id = @id", connection);
 
@@ -166,7 +233,7 @@ namespace AchadosEPerdidos.Negocio
                 comando.ExecuteNonQuery();
                 connection.Close();
             }
-            catch(Exception erro)
+            catch
             {
                 return false;
             }
