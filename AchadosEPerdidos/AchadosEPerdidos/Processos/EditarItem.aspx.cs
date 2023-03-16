@@ -10,24 +10,62 @@ namespace AchadosEPerdidos.Processos
 {
     public partial class EditarItem : System.Web.UI.Page
     {
-        private MySqlConnection connection;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 var id = Request.QueryString["id"].ToString();
-                connection.Open();
-                var comando = new MySqlCommand("SELECT * FROM pessoa WHERE id = " + id, connection);
-                var reader = comando.ExecuteReader();
-                reader.Read();
-                txtNome.Text = reader.GetString("nome");
-                var textoAtivo = "";
-                if (reader.GetBoolean("ativo"))
-                    textoAtivo = "1";
-                else
-                    textoAtivo = "0";
-                rdoAtivo.SelectedValue = textoAtivo;
+                var item = new Negocio.Item().ReadForUpdate(id,"","","","","")[0];
+
+                txtNomePessoa.Text = item.NomePessoa;
+                txtDescricao.Text = item.Descricao;
+                txtLugar.Text = item.Lugar;
+                txtData.Text = item.Data.ToString();
+                txtNomePessoa.Text = item.NomePessoa;
             }
+        }
+
+        protected void btnEditarItem_Click(object sender, EventArgs e)
+        {
+            if (txtNomeItem.Text == "")
+            {
+                lblNomeItem.Text = "Este campo não pode ficar vazio!";
+                return;
+            }
+            else
+                lblNomeItem.Text = "";
+
+            if (txtDescricao.Text == "")
+            {
+                lblDescricao.Text = "Este campo não pode ficar vazio!";
+                return;
+            }
+            else
+                lblDescricao.Text = "";
+
+            if (txtLugar.Text == "")
+            {
+                lblLugar.Text = "Este campo não pode ficar vazio!";
+                return;
+            }
+            else
+                lblLugar.Text = "";
+
+            if (txtData.Text == "")
+            {
+                lblData.Text = "Este campo não pode ficar vazio!";
+                return;
+            }
+            else
+                lblData.Text = "";
+
+            if (txtNomePessoa.Text == "")
+            {
+                lblNomePessoa.Text = "Este campo não pode ficar vazio!";
+                return;
+            }
+            else
+                lblNomePessoa.Text = "";
         }
     }
 }
