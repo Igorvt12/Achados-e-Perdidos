@@ -145,7 +145,7 @@ namespace AchadosEPerdidos.Processos
 
             if (e.CommandName == "editar")
             {
-                //
+                Response.Redirect("EditarItem.aspx");
             }
 
             if (e.CommandName == "status")
@@ -201,8 +201,6 @@ namespace AchadosEPerdidos.Processos
                     }
             }
         }
-
-       
     }
 }
 

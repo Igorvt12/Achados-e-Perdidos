@@ -2,22 +2,31 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-
-    <asp:TextBox runat="server" ID="txtEditarNome" Text="Editar o nome do item"></asp:TextBox>
+    Nome do item:
+    <asp:TextBox runat="server" ID="txtNomeItem"></asp:TextBox>
     <br />
+    <asp:Label runat="server" ID="lblNomeItem" ForeColor="Red"></asp:Label>
     <br />
-    <asp:TextBox runat="server" ID="txtEditarDescricao" Text="Editar o nome do item"></asp:TextBox>
+    Descrição do item:
+    <asp:TextBox runat="server" ID="txtDescricao"></asp:TextBox>
     <br />
+    <asp:Label runat="server" ID="lblDescricao" ForeColor="Red"></asp:Label>
     <br />
-    <asp:TextBox runat="server" ID="txtEditarLugar" placeholder="Editar o nome do item"></asp:TextBox>
+    Lugar encontrado:
+    <asp:TextBox runat="server" ID="txtLugar"></asp:TextBox>
     <br />
+    <asp:Label runat="server" ID="lblLugar" ForeColor="Red"></asp:Label>
     <br />
-    <asp:TextBox runat="server" ID="txtEditarData" placeholder="Editar o nome do item"></asp:TextBox>
+    Data encontrada:
+    <asp:TextBox runat="server" ID="txtData"></asp:TextBox>
     <br />
+    <asp:Label runat="server" ID="lblData" ForeColor="Red"></asp:Label>
     <br />
-    <asp:TextBox runat="server" ID="txtEditarNomePessoa" placeholder="Editar o nome da pessoa que encontrou/perdeu"></asp:TextBox>
+    Nome da pessoa que encontrou / perdeu o item:
+    <asp:TextBox runat="server" ID="txtNomePessoa"></asp:TextBox>
     <br />
+    <asp:Label runat="server" ID="lblNomePessoa" ForeColor="Red"></asp:Label>
     <br />
-    <asp:Button runat="server" ID="btnEditarItem" Text="Atualizar Item" CssClass="btn btn-success" />
+    <asp:Button runat="server" ID="btnEditarItem" Text="Atualizar Item" CssClass="btn btn-success" OnClick="btnEditarItem_Click" />
 
 </asp:Content>

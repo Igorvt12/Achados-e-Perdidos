@@ -16,6 +16,7 @@ namespace AchadosEPerdidos.Modelo
         public string NomePessoa { get; set; } //Nome da pessoa que encontrou.
         public string Email { get; set; } //Email da pessoa que encontrou.
         public int Id_Funcionario { get; set; } //Caso seja um funcionário que tenha cadastrado o item.
+        public string Cpf { get; set; }
          
     }
 }
