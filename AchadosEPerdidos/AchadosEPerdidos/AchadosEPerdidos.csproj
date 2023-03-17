@@ -147,6 +147,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="favicon.ico" />
     <Content Include="Folhas de Estilos\EstiloCadastro.css" />
+    <Content Include="Folhas de Estilos\EstiloContato.css" />
     <Content Include="Folhas de Estilos\EstiloLogin.css" />
     <Content Include="Imagens\login2.jpg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -188,6 +189,7 @@
     <Content Include="Imagens\login3.jpg" />
     <Content Include="Iniciall.aspx" />
     <Content Include="Processos\CadastroItens.aspx" />
+    <Content Include="Processos\Contato.aspx" />
     <Content Include="Processos\EditarItem.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -246,6 +248,13 @@
     </Compile>
     <Compile Include="Processos\CadastroItens.aspx.designer.cs">
       <DependentUpon>CadastroItens.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Processos\Contato.aspx.cs">
+      <DependentUpon>Contato.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Processos\Contato.aspx.designer.cs">
+      <DependentUpon>Contato.aspx</DependentUpon>
     </Compile>
     <Compile Include="Processos\EditarItem.aspx.cs">
       <DependentUpon>EditarItem.aspx</DependentUpon>
