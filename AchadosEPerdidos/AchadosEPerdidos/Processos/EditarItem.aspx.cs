@@ -10,7 +10,6 @@ namespace AchadosEPerdidos.Processos
 {
     public partial class EditarItem : System.Web.UI.Page
     {
-        private MySqlConnection connection;
    
         protected void Page_Load(object sender, EventArgs e)
 
@@ -20,7 +19,7 @@ namespace AchadosEPerdidos.Processos
                 var id = Request.QueryString["id"].ToString();
                 var item = new Negocio.Item().ReadForUpdate(id,"","","","","")[0];
 
-                txtNomePessoa.Text = item.NomePessoa;
+                txtNomeItem.Text = item.NomeItem;
                 txtDescricao.Text = item.Descricao;
                 txtLugar.Text = item.Lugar;
                 txtData.Text = item.Data.ToString();
@@ -70,7 +69,17 @@ namespace AchadosEPerdidos.Processos
 
             else
                 lblNomePessoa.Text = "";
-        }
 
+            var item = new Modelo.Item();
+            item.Id = Convert.ToInt32(Request.QueryString["id"].ToString());
+            item.NomeItem = txtNomeItem.Text;
+            item.Descricao = txtDescricao.Text;
+            item.Lugar = txtLugar.Text;
+            item.Data = Convert.ToDateTime(txtData.Text);
+            item.NomePessoa = txtNomePessoa.Text;
+            new Negocio.Item().Update(item);
+
+            SiteMaster.ExibirAlertRedirecionar(this, "Informações do item editadas!", "CadastroItens.aspx");
+        }
     }
 }
