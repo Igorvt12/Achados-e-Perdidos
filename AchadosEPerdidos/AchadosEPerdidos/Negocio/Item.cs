@@ -25,13 +25,13 @@ namespace AchadosEPerdidos.Negocio
             {
                 connection.Open();
                 var comando = new MySqlCommand($@"INSERT INTO itens
-                                              (nomeitem, lugar, descricao, dataencontrada, status, nomepessoa, email, cpf, id_funcionario) VALUES 
+                                              (nomeitem, lugar, descricao, data, status, nomepessoa, email, cpf, id_funcionario) VALUES 
                                               (@nomeitem, @lugar, @descricao, @dataencontrada, 0, @nomepessoa, @email, @cpf @id_funcionario)", connection);
 
                 comando.Parameters.Add(new MySqlParameter("nomeitem", item.NomeItem));
                 comando.Parameters.Add(new MySqlParameter("lugar", item.Lugar));
                 comando.Parameters.Add(new MySqlParameter("descricao", item.Descricao));
-                comando.Parameters.Add(new MySqlParameter("dataencontrada", item.Data));
+                comando.Parameters.Add(new MySqlParameter("data", item.Data));
                 comando.Parameters.Add(new MySqlParameter("status", item.Status));
                 comando.Parameters.Add(new MySqlParameter("nomepessoa", item.NomePessoa));
                 comando.Parameters.Add(new MySqlParameter("email", item.Email));
@@ -152,16 +152,15 @@ namespace AchadosEPerdidos.Negocio
                     itens.Add(new Modelo.Item
                     {
                         NomeItem = reader.GetString("nomeitem"),
-                        Lugar = reader.GetString("descricao"),
-                        Descricao = reader.GetString("lugar"),
-                        Status = reader.GetBoolean("data"),
+                        Lugar = reader.GetString("lugar"),
+                        Descricao = reader.GetString("descricao"),
                         NomePessoa = reader.GetString("nomepessoa"),
                         Id = reader.GetInt32("id")
                     });
                 }
             }
 
-            catch
+            catch(Exception err)
             {
 
             }
@@ -181,14 +180,14 @@ namespace AchadosEPerdidos.Negocio
                                                 nomeitem = @nomeitem,
                                                 lugar = @lugar,
                                                 descricao = @descricao,
-                                                dataencontrada = @dataencontrada,
+                                                data = @data,
                                                 email = @email,
                                                 id_funcionario = @id_funcionario WHERE id = @id", connection);
 
                 comando.Parameters.Add(new MySqlParameter("nomeitem", item.NomeItem));
                 comando.Parameters.Add(new MySqlParameter("lugar", item.Lugar));
                 comando.Parameters.Add(new MySqlParameter("descricao", item.Descricao));
-                comando.Parameters.Add(new MySqlParameter("dataencontrada", item.Data));
+                comando.Parameters.Add(new MySqlParameter("data", item.Data));
                 comando.Parameters.Add(new MySqlParameter("nomepessoa", item.NomePessoa));
                 comando.Parameters.Add(new MySqlParameter("email", item.Email));
                 comando.Parameters.Add(new MySqlParameter("id_funcionario", item.Id_Funcionario));
@@ -196,7 +195,7 @@ namespace AchadosEPerdidos.Negocio
                 comando.ExecuteNonQuery();
                 connection.Close();
             }
-            catch
+            catch (Exception err)
             {
                 return false;
             }

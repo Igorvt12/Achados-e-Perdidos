@@ -145,7 +145,7 @@ namespace AchadosEPerdidos.Processos
 
             if (e.CommandName == "editar")
             {
-                Response.Redirect("EditarItem.aspx");
+                Response.Redirect("EditarItem.aspx?id="+ itens[index].Id);
             }
 
             if (e.CommandName == "status")
