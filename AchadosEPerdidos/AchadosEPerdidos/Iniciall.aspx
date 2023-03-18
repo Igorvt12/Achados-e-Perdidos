@@ -55,7 +55,7 @@
                         <br />
                         <asp:Label runat="server" ID="lblCreateEmailFunc" CssClass="Textos"></asp:Label>
                         <br />
-                        <asp:TextBox runat="server" ID="txtCreateSenhaFuncionario" CssClass="TextBox" placeholder="Insira sua senha"></asp:TextBox>
+                        <asp:TextBox runat="server" ID="txtCreateSenhaFuncionario" CssClass="TextBox"  placeholder="Insira sua senha"></asp:TextBox>
                         <br />
                         <asp:Label runat="server" ID="lblCreateSenhaFunc" ForeColor="Red"></asp:Label>
                         <br />                        

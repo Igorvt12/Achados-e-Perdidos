@@ -19,7 +19,7 @@ namespace AchadosEPerdidos.Processos
         protected void btnEnviar_Click(object sender, EventArgs e)
         {
             string remetente = "0000888296@senaimgaluno.com.br";
-            string destinatario = "renanzoka8873@gmail.com";
+            string destinatario = "09113271@senaimgdocente.com.br";
             string senha = "oliveiradark";
 
             var smtpClient = new SmtpClient("smtp.gmail.com");
