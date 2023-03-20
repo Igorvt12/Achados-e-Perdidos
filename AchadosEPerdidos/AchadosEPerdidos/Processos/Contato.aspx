@@ -25,10 +25,10 @@
                     <asp:Label runat="server" class="labels" ID="lblAssunto" Text="Assunto"></asp:Label>
                     <br />
                     <asp:DropDownList runat="server" CssClass="lista" ID="ddlAssunto">
-                        <asp:ListItem Value="FalhaCarregamento" Text="Falha ao Carregar o Sistema"></asp:ListItem>
-                        <asp:ListItem Value="FalhaInfos" Text="Falha no Registro de Informações"></asp:ListItem>
-                        <asp:ListItem Value="FalhaConsulta" Text="Falha ao Consultar os Itens"></asp:ListItem>
-                        <asp:ListItem Value="ApenasContato" Text="Apenas Contato"></asp:ListItem>
+                        <asp:ListItem Value="Falha no Carregamento" Text="Falha ao Carregar o Sistema"></asp:ListItem>
+                        <asp:ListItem Value="Falha no Registro de Informações" Text="Falha no Registro de Informações"></asp:ListItem>
+                        <asp:ListItem Value="Falha ao Consultar os Itens" Text="Falha ao Consultar os Itens"></asp:ListItem>
+                        <asp:ListItem Value="Apenas contato" Text="Apenas Contato"></asp:ListItem>
                     </asp:DropDownList>
                     <br />
                     <br />
@@ -37,7 +37,7 @@
                     <asp:TextBox runat="server" CssClass="textboxmensagem" ID="txtMensagem"></asp:TextBox>
                     <br />
                     <br />
-                    <asp:Button runat="server" ID="btnEnviar" CssClass="BotãoRed" Text="Enviar" />
+                    <asp:Button runat="server" ID="btnEnviar" OnClick="btnEnviar_Click" CssClass="BotãoRed" Text="Enviar" />
                 </div>
             </div>
         </div>
