@@ -31,7 +31,7 @@
                 <div class="col-sm-2"></div>
     
                 <div class="col-sm-8">
-                    <h3 class="text FraseContainer">Plataforma online com objetivo único de auxiliar pessoas a acharem itens pessoais que foram perdidos ou encontrados em certos estabelecimentos
+                    <h3 class="fraseimagem">Plataforma online com objetivo único de auxiliar pessoas a acharem itens pessoais que foram perdidos ou encontrados em certos estabelecimentos
                     podendo também ver o status do item, se o mesmo já foi achado ou ainda se encontra perdido. Usuários normais poderão apenas ver o status do item,
                     já os administradores poderão alterar o mesmo.
                     </h3>
@@ -121,9 +121,10 @@
     </div>
 
 
-    <div id="bottom">
+    
         <div class="col-sm-12">
             <div class="jumbotron Jumbotron">
+    
                 <h3 style="font-weight: 900" class="Textos">*Encontre seu item perdido.</h3>
                 <div class="row">
                     <div class="col-sm-3"></div>
