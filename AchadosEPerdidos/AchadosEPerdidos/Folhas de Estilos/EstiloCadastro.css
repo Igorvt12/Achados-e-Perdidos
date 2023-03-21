@@ -12,15 +12,7 @@
     color: white;
     height: 330px;
 }
-.FraseImage {
-    text-align: center;
-    color: white;
-    font-family: "Montserrat-Regular", sans-serif;
-    font-size: 20px;
-    position: absolute;
-    margin-top: -9%;
-    margin-left: 50px;        
-}
+
 .fraseimagem {
     text-align: center;
     color: white;
@@ -82,7 +74,7 @@
 .BotãoRed { /*Modificações dos Botões*/
     background: linear-gradient(132deg, rgba(181,175,177,1) 0%, rgba(0,0,0,1) 0%, rgba(32,8,14,1) 0%, rgba(181,13,48,1) 100%);
     color: white;
-    font-family: "Montserrat-Regular", sans-serif;
+    font-family: "Montserrat", sans-serif;
     line-height: 1.42857;
     border-radius: 25px;
     font-size: 15px;
@@ -98,6 +90,11 @@
     border-radius: 25px;
     font-size:20px;
     text-align:center;
+    
+}
+TitulosGrid{
+    text-align:center;
+    font-weight:400;
 }
 
 .ItemPerdidoAchado {
@@ -127,12 +124,29 @@
     font-family: "Montserrat", sans-serif;
 }
 
-
-
-
 .lbl {
     color: #b50d3a;
 }
 
+.BotãoEditar {
+    background: linear-gradient(90deg, rgba(156,69,3,1) 18%, rgba(2,0,36,1) 84%);
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    border-radius: 25px;
+    border-color: white;
+    line-height: 1.42857;
+    height: 30px;
+    width: 120px;
+}
+.BotãoExcluir {
+    background: linear-gradient(90deg, rgba(25,3,97,1) 18%, rgba(2,0,36,1) 84%);
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    border-radius: 25px;
+    border-color: white;
+    line-height: 1.42857;
+    height: 30px;
+    width: 120px;
+}
 
 

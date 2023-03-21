@@ -6,9 +6,8 @@
         <div class="col-sm-3"></div>
         <div class="col-sm-6" style="padding-top: 1px;">
             <div class="jumbotron Jumbotron" style="text-align: center;">
-                <h1 style="color: #b50d3a; font-family: 'Montserrat',sans-serif;">CONTATO</h1>
-                <h4 class="fras" style="color:#b50d3a; font-family: Montserrat,sans-serif; font-weight:300; line-height:35px;">
-                    Caso tenha tido algum problema relacionado ao site, insira  suas informações e o assunto
+                <h1 style="color: #660202;" class="titulo">CONTATO</h1>
+                <h4 class="fras" style="color: #b50d3a; font-family: Montserrat,sans-serif; font-weight: 300; line-height: 35px;">Caso tenha tido algum problema relacionado ao site, insira  suas informações e o assunto
                     e sua solicitação será enviada até nós.
                 </h4>
                 <div style="padding-top: 20px;">
@@ -47,5 +46,5 @@
     </div>
 
 
-   
+
 </asp:Content>

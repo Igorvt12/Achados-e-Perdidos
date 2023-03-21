@@ -14,7 +14,8 @@ namespace AchadosEPerdidos.Processos
     public partial class CadastroItens : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {           
+        {
+            
             if (!IsPostBack)
             {
             }
@@ -193,13 +194,24 @@ namespace AchadosEPerdidos.Processos
 
                 if (Session["funcionario_logado"] == null)
                 {
-                    e.Row.Cells[3].Text = "Ainda perdido";
+                    e.Row.Cells[3].Text = "Perdido";
                 }
                     if (item.Status == true)
                     {
                         e.Row.Cells[3].Text = "Encontrado";
                     }
             }
+        }
+
+        protected void btnItemPerdido_Click(object sender, EventArgs e)
+        {
+            pnlCadastro.Visible = true;
+        }
+
+        protected void btnItemAchado_Click(object sender, EventArgs e)
+        {
+            pnlCadastro.Visible = true;
+            txtCpfPessoa.Visible = false;
         }
     }
 }
