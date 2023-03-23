@@ -164,10 +164,10 @@
 
                     <asp:GridView runat="server" ID="grdItens" OnRowCommand="grdItens_RowCommand" OnRowDataBound="OnRowDataBound" OnPageIndexChanging="grdItens_PageIndexChanging" CssClass="Grid" Width="100%" AutoGenerateColumns="false" AllowPaging="false">
                         <Columns>
-                            <asp:BoundField DataField="nomeitem" HeaderText="Nome do Item" />
+                             <asp:BoundField DataField="nomeitem" HeaderText="Nome do Item" />
                             <asp:BoundField DataField="descricao" HeaderText="Descrição" />
                             <asp:BoundField DataField="lugar" HeaderText="Lugar" />
-                            <asp:ButtonField ButtonType="Button" HeaderText="Status" CommandName="status" Text="Alterar Status para encontrado" ControlStyle-CssClass="btn btn-success" />
+                            <asp:ButtonField ButtonType="Button" HeaderText="Status" CommandName="status" Text="Alterar Status" ControlStyle-CssClass="btn BotãoAlterar" />
                             <asp:ButtonField ButtonType="Link" HeaderText="Atualizar" CommandName="editar" ControlStyle-CssClass="btn BotãoEditar" Text="Editar" />
                             <asp:ButtonField ButtonType="Link" HeaderText="Excluir" CommandName="excluir" ControlStyle-CssClass="btn BotãoExcluir" Text="Excluir" />
                         </Columns>

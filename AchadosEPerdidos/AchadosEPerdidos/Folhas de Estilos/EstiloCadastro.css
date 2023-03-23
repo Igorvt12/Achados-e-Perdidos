@@ -84,14 +84,27 @@
 }
 
 .Grid {    
-    color: #b50d3a;
+    
     font-family: "Montserrat", sans-serif;
-    border: 2px solid #b50d3a;
-    border-radius: 25px;
+    border: 1px solid #b50d3a;
+    border-radius: 5px;
     font-size:20px;
     text-align:center;
     
 }
+
+
+th {
+    color: white;
+    text-align: center;
+    background: linear-gradient(132deg, rgba(181,175,177,1) 0%, rgba(0,0,0,1) 0%, rgba(32,8,14,1) 0%, rgba(181,13,48,1) 100%);
+}
+td {
+    color: #b50d3a;
+}
+
+
+
 TitulosGrid{
     text-align:center;
     font-weight:400;
@@ -127,26 +140,41 @@ TitulosGrid{
 .lbl {
     color: #b50d3a;
 }
+.BotãoAlterar {    
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,82,1) 0%, rgba(0,0,0,1) 100%);
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    
+    border-color: white;
+    line-height: 1.42857;
+    height: 30px;
+    width: 130px;
+    font-weight:600;
+}
 
 .BotãoEditar {
     background: linear-gradient(90deg, rgba(156,69,3,1) 18%, rgba(2,0,36,1) 84%);
     color: white;
     font-family: "Montserrat", sans-serif;
-    border-radius: 25px;
+    
     border-color: white;
     line-height: 1.42857;
     height: 30px;
     width: 120px;
+    font-weight: 600;
 }
+
 .BotãoExcluir {
     background: linear-gradient(90deg, rgba(25,3,97,1) 18%, rgba(2,0,36,1) 84%);
     color: white;
-    font-family: "Montserrat", sans-serif;
-    border-radius: 25px;
+    font-family: "Montserrat", sans-serif;   
     border-color: white;
     line-height: 1.42857;
     height: 30px;
-    width: 120px;
+    width: 140px;
+    font-weight: 600;
 }
+
+
 
 
