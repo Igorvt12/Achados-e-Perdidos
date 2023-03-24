@@ -150,7 +150,7 @@
                         <div class="col-sm-4">
                             <br />
                             <br />
-                            <div style="text-align: center">
+                            <div style="text-align: center;position:relative">
                                 <asp:RadioButtonList runat="server" ID="rdoStatus" RepeatDirection="Vertical" CssClass="form-control radio">
                                     <asp:ListItem Text="Todos os itens" Value="" Selected="True"></asp:ListItem>
                                     <asp:ListItem Text="Somente achados" Value="1"></asp:ListItem>
