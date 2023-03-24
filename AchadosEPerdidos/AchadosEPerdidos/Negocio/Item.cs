@@ -25,8 +25,8 @@ namespace AchadosEPerdidos.Negocio
             {
                 connection.Open();
                 var comando = new MySqlCommand($@"INSERT INTO itens
-                                              (nomeitem, lugar, descricao, data, status, nomepessoa, email, cpf, id_funcionario) VALUES 
-                                              (@nomeitem, @lugar, @descricao, @dataencontrada, 0, @nomepessoa, @email, @cpf @id_funcionario)", connection);
+                                              (nomeitem, lugar, descricao, data, status, nomepessoa, email, cpf, id_funcionario, perdiachei) VALUES 
+                                              (@nomeitem, @lugar, @descricao, @data, 0, @nomepessoa, @email, @cpf, @id_funcionario, @perdiachei)", connection);
 
                 comando.Parameters.Add(new MySqlParameter("nomeitem", item.NomeItem));
                 comando.Parameters.Add(new MySqlParameter("lugar", item.Lugar));
@@ -37,11 +37,12 @@ namespace AchadosEPerdidos.Negocio
                 comando.Parameters.Add(new MySqlParameter("email", item.Email));
                 comando.Parameters.Add(new MySqlParameter("cpf", item.Cpf));
                 comando.Parameters.Add(new MySqlParameter("id_funcionario", item.Id_Funcionario));
-                
+                comando.Parameters.Add(new MySqlParameter("perdiachei", item.PerdiAchei));
+
                 comando.ExecuteNonQuery();
                 connection.Close();
             }
-            catch
+            catch(Exception ERR)
             {
                 return false;
             }
@@ -238,6 +239,7 @@ namespace AchadosEPerdidos.Negocio
             }
             return true;
         }
+
 
     }
 }
