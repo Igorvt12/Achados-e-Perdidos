@@ -22,6 +22,43 @@ namespace AchadosEPerdidos.Processos
 
 
         }
+
+        public static bool VerificaCpf(string cpf)
+        {
+            int[] multiplicador1 = new int[9] { 10, 9, 8, 7, 6, 5, 4, 3, 2 };
+            int[] multiplicador2 = new int[10] { 11, 10, 9, 8, 7, 6, 5, 4, 3, 2 };
+            string tempCpf;
+            string digito;
+            int soma;
+            int resto;
+            cpf = cpf.Trim();
+            cpf = cpf.Replace(".", "").Replace("-", "");
+            if (cpf.Length != 11)
+                return false;
+            tempCpf = cpf.Substring(0, 9);
+            soma = 0;
+
+            for (int i = 0; i < 9; i++)
+                soma += int.Parse(tempCpf[i].ToString()) * multiplicador1[i];
+            resto = soma % 11;
+            if (resto < 2)
+                resto = 0;
+            else
+                resto = 11 - resto;
+            digito = resto.ToString();
+            tempCpf = tempCpf + digito;
+            soma = 0;
+            for (int i = 0; i < 10; i++)
+                soma += int.Parse(tempCpf[i].ToString()) * multiplicador2[i];
+            resto = soma % 11;
+            if (resto < 2)
+                resto = 0;
+            else
+                resto = 11 - resto;
+            digito = digito + resto.ToString();
+            return cpf.EndsWith(digito);
+        }
+
         private bool VerificaEmail(string testar_email)
         {
             Regex rg = new Regex(@"^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$");
@@ -35,6 +72,7 @@ namespace AchadosEPerdidos.Processos
                 return false;
             }
         }
+
         protected void btnCadastrarItem_Click(object sender, EventArgs e)
         {
             Log.Logger = new LoggerConfiguration()
@@ -48,45 +86,52 @@ namespace AchadosEPerdidos.Processos
                 lblNomeItem.Text = "Campo obrigatório!";
                 return;
             }
-            else
-            {
-                lblNomeItem.Text = "";
-            }
+            lblNomeItem.Text = "";
+
             if (txtNomePessoa.Text == "")
             {
                 lblNomePessoa.Text = "Campo obrigatório!";
                 return;
-            }
-            else
+            }         
+            lblNomePessoa.Text = "";
+
+            if (txtCpfPessoa.Text == "" && txtCpfPessoa.Visible == true)
             {
-                lblNomePessoa.Text = "";
+                lblCpf.Text = "Campo obrigatório!";
+                return;
             }
+            lblCpf.Text = "";
+
             if (txtDescricao.Text == "")
             {
                 lblDescrição.Text = "Campo obrigatório!";
                 return;
             }
-            else
-            {
-                lblDescrição.Text = "";
-            }
+            lblDescrição.Text = "";
+
             if (txtLugar.Text == "")
             {
                 lblLugar.Text = "Campo obrigatório!";
                 return;
             }
-            else
-            {
-                lblLugar.Text = "";
-            }
+            lblLugar.Text = "";
+
             if (txtData.Text == "")
             {
                 lblData.Text = "Campo obrigatório!";
                 return;
             }
+            lblData.Text = "";
+
+            if (VerificaCpf(txtCpfPessoa.Text) == false && txtCpfPessoa.Visible == true)
+            {
+                lblCpf.Text = "Cpf inválido!";
+                Log.Error("Cpf do usuario é inválido");
+                return;
+            }
             else
             {
-                lblData.Text = "";
+                lblEmail.Text = "";
             }
 
             //Verificar se o email é válido
@@ -112,7 +157,9 @@ namespace AchadosEPerdidos.Processos
                 NovoItem.Data = Convert.ToDateTime(txtData.Text);
                 NovoItem.NomePessoa = txtNomePessoa.Text;
                 NovoItem.Email = txtEmail.Text;
+                NovoItem.Cpf = txtCpfPessoa.Text;
                 NovoItem.Id_Funcionario = 1;
+                NovoItem.PerdiAchei = txtCpfPessoa.Visible == false;
 
                 Negocio.Item AcoesItem = new Negocio.Item();
                 AcoesItem.Create(NovoItem);
@@ -206,12 +253,16 @@ namespace AchadosEPerdidos.Processos
         protected void btnItemPerdido_Click(object sender, EventArgs e)
         {
             pnlCadastro.Visible = true;
+            txtCpfPessoa.Visible = true;
         }
 
         protected void btnItemAchado_Click(object sender, EventArgs e)
         {
             pnlCadastro.Visible = true;
             txtCpfPessoa.Visible = false;
+
+            Modelo.Item NovoItem = new Modelo.Item();
+            NovoItem.PerdiAchei = true;
         }
     }
 }

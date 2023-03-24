@@ -84,6 +84,7 @@
                         <asp:TextBox runat="server" Width="100%" ID="txtNomePessoa" CssClass="TextBox" placeholder="Digite seu nome"></asp:TextBox>
                         <br />
                         <asp:TextBox runat="server" Width="100%" ID="txtCpfPessoa" CssClass="TextBox" placeholder="Digite seu CPF (Caso de solicitação do item, deve-se apresentar o CPF.)"></asp:TextBox>
+                        <asp:Label runat="server" ID="lblCpf" ForeColor="Red"></asp:Label>
                     </div>
                 </div>
                 <br />

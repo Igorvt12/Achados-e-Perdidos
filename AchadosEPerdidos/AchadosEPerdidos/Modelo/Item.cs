@@ -17,6 +17,7 @@ namespace AchadosEPerdidos.Modelo
         public string Email { get; set; } //Email da pessoa que encontrou.
         public int Id_Funcionario { get; set; } //Caso seja um funcionário que tenha cadastrado o item.
         public string Cpf { get; set; }
+        public bool PerdiAchei { get; set; }
          
     }
 }
