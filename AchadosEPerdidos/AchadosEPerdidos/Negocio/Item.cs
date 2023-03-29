@@ -25,13 +25,13 @@ namespace AchadosEPerdidos.Negocio
             {
                 connection.Open();
                 var comando = new MySqlCommand($@"INSERT INTO itens
-                                              (nomeitem, lugar, descricao, data, status, nomepessoa, email, cpf, id_funcionario, perdiachei) VALUES 
-                                              (@nomeitem, @lugar, @descricao, @data, 0, @nomepessoa, @email, @cpf, @id_funcionario, @perdiachei)", connection);
+                                              (nomeitem, lugar, descricao, dataencontrada, status, nomepessoa, email, cpf, id_funcionario, perdiachei) VALUES 
+                                              (@nomeitem, @lugar, @descricao, @dataencontrada, 0, @nomepessoa, @email, @cpf, @id_funcionario, @perdiachei)", connection);
 
                 comando.Parameters.Add(new MySqlParameter("nomeitem", item.NomeItem));
                 comando.Parameters.Add(new MySqlParameter("lugar", item.Lugar));
                 comando.Parameters.Add(new MySqlParameter("descricao", item.Descricao));
-                comando.Parameters.Add(new MySqlParameter("data", item.Data));
+                comando.Parameters.Add(new MySqlParameter("dataencontrada", item.Data));
                 comando.Parameters.Add(new MySqlParameter("status", item.Status));
                 comando.Parameters.Add(new MySqlParameter("nomepessoa", item.NomePessoa));
                 comando.Parameters.Add(new MySqlParameter("email", item.Email));
@@ -113,7 +113,7 @@ namespace AchadosEPerdidos.Negocio
             try
             {
                 connection.Open();
-                var commando = new MySqlCommand($"SELECT id, nomeitem, descricao, lugar, data, nomepessoa FROM itens WHERE (1=1) ", connection);
+                var commando = new MySqlCommand($"SELECT id, nomeitem, descricao, lugar, dataencontrada, nomepessoa FROM itens WHERE (1=1) ", connection);
 
                 if (id.Equals("") == false)
                 {
@@ -135,9 +135,9 @@ namespace AchadosEPerdidos.Negocio
                     commando.CommandText += $" AND lugar like @lugar,";
                     commando.Parameters.Add(new MySqlParameter("lugar", $"%{lugar}%"));
                 }
-                if (lugar.Equals("") == false)
+                if (data.Equals("") == false)
                 {
-                    commando.CommandText += $" AND data like @data,";
+                    commando.CommandText += $" AND data like @dataencontrada,";
                     commando.Parameters.Add(new MySqlParameter("data", $"%{data}%"));
                 }
                 if (nomepessoa.Equals("") == false)
@@ -161,9 +161,9 @@ namespace AchadosEPerdidos.Negocio
                 }
             }
 
-            catch(Exception err)
+            catch(Exception error)
             {
-
+                
             }
             finally
             {
