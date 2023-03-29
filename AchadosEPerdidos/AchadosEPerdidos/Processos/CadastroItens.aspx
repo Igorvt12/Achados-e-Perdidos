@@ -169,6 +169,7 @@
                             <asp:BoundField DataField="descricao" HeaderText="Descrição" />
                             <asp:BoundField DataField="lugar" HeaderText="Lugar" />
                             <asp:ButtonField ButtonType="Button" HeaderText="Status" CommandName="status" Text="Alterar Status" ControlStyle-CssClass="btn BotãoAlterar" />
+                            <asp:BoundField DataField="data" HeaderText="Data de Cadastro" />
                             <asp:ButtonField ButtonType="Link" HeaderText="Atualizar" CommandName="editar" ControlStyle-CssClass="btn BotãoEditar" Text="Editar" />
                             <asp:ButtonField ButtonType="Link" HeaderText="Excluir" CommandName="excluir" ControlStyle-CssClass="btn BotãoExcluir" Text="Excluir" />
                         </Columns>
