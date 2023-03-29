@@ -184,6 +184,7 @@ namespace AchadosEPerdidos.Processos
             txtEmail.Text = "";
             txtCpfPessoa.Text = "";
 
+
         }
         protected void grdItens_RowCommand(object sender, GridViewCommandEventArgs e)
         {
@@ -264,13 +265,15 @@ namespace AchadosEPerdidos.Processos
             pnlCadastro.Visible = true;
             txtCpfPessoa.Visible = true;
             grdItens.Visible = false;
+
         }
 
         protected void btnItemAchado_Click(object sender, EventArgs e)
         {
             pnlCadastro.Visible = true;
             txtCpfPessoa.Visible = false;
-            grdItens.Visible = false;
+                              grdItens.Visible = false;
+
         }
     }
 }

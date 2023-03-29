@@ -149,6 +149,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Folhas de Estilos\EstiloCadastro.css" />
     <Content Include="Folhas de Estilos\EstiloContato.css" />
+    <Content Include="Folhas de Estilos\EstiloEditar.css" />
     <Content Include="Folhas de Estilos\EstiloLogin.css" />
     <Content Include="Imagens\login2.jpg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
