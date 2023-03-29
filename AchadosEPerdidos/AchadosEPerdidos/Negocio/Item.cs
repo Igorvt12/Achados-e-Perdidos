@@ -1,4 +1,4 @@
-﻿using MySqlConnector;
+using MySqlConnector;
 using System;
 using System.Collections.Generic;
 using System.Web.UI;
@@ -144,8 +144,10 @@ namespace AchadosEPerdidos.Negocio
                 }
                 if (data.Equals("") == false)
                 {
+
                     commando.CommandText += $" AND dataencontrada like @data,";
                     commando.Parameters.Add(new MySqlParameter("dataencontrada", $"%{data}%"));
+
                 }
                 if (nomepessoa.Equals("") == false)
                 {
@@ -168,9 +170,9 @@ namespace AchadosEPerdidos.Negocio
                 }
             }
 
-            catch(Exception err)
+            catch(Exception error)
             {
-
+                
             }
             finally
             {
