@@ -18,8 +18,11 @@ namespace AchadosEPerdidos.Processos
 
             if (!IsPostBack)
             {
-                //grdItens.Columns[4].Visible = false;
-               //grdItens.Columns[5].Visible = false;
+                if (Session["funcionario_logado"] == null)
+                {                    
+                    grdItens.Columns[5].Visible = false;
+                    grdItens.Columns[6].Visible = false;
+                }
             }
 
 
@@ -227,7 +230,7 @@ namespace AchadosEPerdidos.Processos
             else
                 lblPesquisar.Text = "";
 
-            var itens = new Negocio.Item().Read("", txtPesqNome.Text, txtLugar.Text, txtDescricao.Text, rdoStatus.SelectedValue,  txtData.Text);
+            var itens = new Negocio.Item().Read("", txtPesqNome.Text, txtLugar.Text, txtDescricao.Text, rdoStatus.SelectedValue, txtData.Text);
             Session["dados"] = itens;
             grdItens.DataSource = itens;
             grdItens.DataBind();
@@ -244,18 +247,12 @@ namespace AchadosEPerdidos.Processos
                 if (Session["funcionario_logado"] == null)
                 {
                     e.Row.Cells[3].Text = "Perdido";
-
-                    
-                    
                 }
 
                 if (item.Status == true)
                 {
                     e.Row.Cells[3].Text = "Encontrado";
                 }
-
-                //grdItens.Columns[4].Visible = true;
-                //grdItens.Columns[5].Visible = true;
             }
         }
 
