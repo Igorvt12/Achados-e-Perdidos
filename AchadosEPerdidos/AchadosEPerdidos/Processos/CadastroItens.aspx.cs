@@ -182,7 +182,8 @@ namespace AchadosEPerdidos.Processos
             txtData.Text = "";
             txtNomePessoa.Text = "";
             txtEmail.Text = "";
-            grdItens.Visible = false;
+            txtCpfPessoa.Text = "";
+
 
         }
         protected void grdItens_RowCommand(object sender, GridViewCommandEventArgs e)
@@ -223,6 +224,8 @@ namespace AchadosEPerdidos.Processos
 
         protected void btnPesquisar_Click(object sender, EventArgs e)
         {
+            grdItens.Visible = true;
+
             if (txtPesqNome.Text == "")
             {
                 lblPesquisar.Text = "Insira o nome de algum objeto!";
@@ -261,16 +264,16 @@ namespace AchadosEPerdidos.Processos
         {
             pnlCadastro.Visible = true;
             txtCpfPessoa.Visible = true;
-            
+            grdItens.Visible = false;
+
         }
 
         protected void btnItemAchado_Click(object sender, EventArgs e)
         {
             pnlCadastro.Visible = true;
             txtCpfPessoa.Visible = false;
+                              grdItens.Visible = false;
 
-            Modelo.Item NovoItem = new Modelo.Item();
-            
         }
     }
 }

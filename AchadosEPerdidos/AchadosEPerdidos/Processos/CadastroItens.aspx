@@ -106,7 +106,7 @@
                 <asp:Label runat="server" ID="lblLugar" ForeColor="Red"></asp:Label>
                 <br />
 
-                <asp:TextBox runat="server" ID="txtData" CssClass="TextBox" placeholder="Data que foi encontrada"></asp:TextBox>
+                <asp:TextBox runat="server" ID="txtData" TextMode="Date" CssClass="TextBox" placeholder="Data que foi encontrada"></asp:TextBox>
                 <br />
                 <asp:Label runat="server" ID="lblData" ForeColor="Red"></asp:Label>
                 <br />
@@ -163,13 +163,14 @@
                     </div>
                     <br />
 
-                    <asp:GridView runat="server" ID="grdItens" OnRowCommand="grdItens_RowCommand" OnRowDataBound="OnRowDataBound" OnPageIndexChanging="grdItens_PageIndexChanging" CssClass="Grid" Width="100%" AutoGenerateColumns="false" AllowPaging="false">
+                    <asp:GridView runat="server" ID="grdItens" OnRowCommand="grdItens_RowCommand" OnRowDataBound="OnRowDataBound"  Visible="false"
+                        OnPageIndexChanging="grdItens_PageIndexChanging" CssClass="Grid" Width="100%" AutoGenerateColumns="false" AllowPaging="false">
                         <Columns>
                              <asp:BoundField DataField="nomeitem" HeaderText="Nome do Item" />
                             <asp:BoundField DataField="descricao" HeaderText="Descrição" />
                             <asp:BoundField DataField="lugar" HeaderText="Lugar" />
                             <asp:ButtonField ButtonType="Button" HeaderText="Status" CommandName="status" Text="Alterar Status" ControlStyle-CssClass="btn BotãoAlterar" />
-                            <asp:BoundField DataField="data" HeaderText="Data de Cadastro" />
+                            <asp:BoundField DataField="data" HeaderText="Data de Cadastro" dataformatstring="{0:dd/MM/yyyy}"/>
                             <asp:ButtonField ButtonType="Link" HeaderText="Atualizar" CommandName="editar" ControlStyle-CssClass="btn BotãoEditar" Text="Editar" />
                             <asp:ButtonField ButtonType="Link" HeaderText="Excluir" CommandName="excluir" ControlStyle-CssClass="btn BotãoExcluir" Text="Excluir" />
                         </Columns>
