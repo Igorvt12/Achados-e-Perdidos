@@ -182,6 +182,7 @@ namespace AchadosEPerdidos.Processos
             txtData.Text = "";
             txtNomePessoa.Text = "";
             txtEmail.Text = "";
+            grdItens.Visible = false;
 
         }
         protected void grdItens_RowCommand(object sender, GridViewCommandEventArgs e)
@@ -260,6 +261,7 @@ namespace AchadosEPerdidos.Processos
         {
             pnlCadastro.Visible = true;
             txtCpfPessoa.Visible = true;
+            
         }
 
         protected void btnItemAchado_Click(object sender, EventArgs e)
@@ -268,7 +270,7 @@ namespace AchadosEPerdidos.Processos
             txtCpfPessoa.Visible = false;
 
             Modelo.Item NovoItem = new Modelo.Item();
-            NovoItem.PerdiAchei = true;
+            
         }
     }
 }

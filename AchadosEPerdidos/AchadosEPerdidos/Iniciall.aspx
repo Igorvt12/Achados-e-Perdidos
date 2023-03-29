@@ -40,7 +40,7 @@
                         <asp:TextBox runat="server" ID="txtEmailFuncionarios" CssClass="TextBox" placeholder="Insira seu email"></asp:TextBox>
                         <br />
                         <br />
-                        <asp:TextBox runat="server" ID="txtSenha" CssClass="TextBox" placeholder="Insira sua senha"></asp:TextBox>
+                        <asp:TextBox runat="server" ID="txtSenha" CssClass="TextBox"  placeholder="Insira sua senha"></asp:TextBox>
                         <br />
                         <asp:Button runat="server" ID="btnEntrar" Text="Entrar" CssClass="BotãoEntrar" OnClick="btnEntrar_Click" />
                         <br />
