@@ -15,9 +15,11 @@ namespace AchadosEPerdidos.Processos
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
             if (!IsPostBack)
             {
+                //grdItens.Columns[4].Visible = false;
+               //grdItens.Columns[5].Visible = false;
             }
 
 
@@ -92,7 +94,7 @@ namespace AchadosEPerdidos.Processos
             {
                 lblNomePessoa.Text = "Campo obrigatório!";
                 return;
-            }         
+            }
             lblNomePessoa.Text = "";
 
             if (txtCpfPessoa.Text == "" && txtCpfPessoa.Visible == true)
@@ -193,7 +195,7 @@ namespace AchadosEPerdidos.Processos
 
             if (e.CommandName == "editar")
             {
-                Response.Redirect("EditarItem.aspx?id="+ itens[index].Id);
+                Response.Redirect("EditarItem.aspx?id=" + itens[index].Id);
             }
 
             if (e.CommandName == "status")
@@ -216,7 +218,7 @@ namespace AchadosEPerdidos.Processos
         }
 
         protected void btnPesquisar_Click(object sender, EventArgs e)
-        {           
+        {
             if (txtPesqNome.Text == "")
             {
                 lblPesquisar.Text = "Insira o nome de algum objeto!";
@@ -225,7 +227,7 @@ namespace AchadosEPerdidos.Processos
             else
                 lblPesquisar.Text = "";
 
-            var itens = new Negocio.Item().Read("", txtPesqNome.Text, txtLugar.Text, txtDescricao.Text, rdoStatus.SelectedValue);
+            var itens = new Negocio.Item().Read("", txtPesqNome.Text, txtLugar.Text, txtDescricao.Text, rdoStatus.SelectedValue,  txtData.Text);
             Session["dados"] = itens;
             grdItens.DataSource = itens;
             grdItens.DataBind();
@@ -242,11 +244,18 @@ namespace AchadosEPerdidos.Processos
                 if (Session["funcionario_logado"] == null)
                 {
                     e.Row.Cells[3].Text = "Perdido";
+
+                    
+                    
                 }
-                    if (item.Status == true)
-                    {
-                        e.Row.Cells[3].Text = "Encontrado";
-                    }
+
+                if (item.Status == true)
+                {
+                    e.Row.Cells[3].Text = "Encontrado";
+                }
+
+                //grdItens.Columns[4].Visible = true;
+                //grdItens.Columns[5].Visible = true;
             }
         }
 

@@ -1,4 +1,4 @@
-﻿using MySqlConnector;
+using MySqlConnector;
 using System;
 using System.Collections.Generic;
 using System.Web.UI;
@@ -48,13 +48,13 @@ namespace AchadosEPerdidos.Negocio
             }
             return true;
         }
-        public List<Modelo.Item> Read(string id, string nome, string descricao, string lugar, string status)
+        public List<Modelo.Item> Read(string id, string nome, string descricao, string lugar, string status, string data)
         {
             var itens = new List<Modelo.Item>();
             try
             {
                 connection.Open();               
-                var commando = new MySqlCommand($"SELECT id, nomeitem, descricao, lugar, status FROM itens WHERE (1=1) ", connection);
+                var commando = new MySqlCommand($"SELECT id, nomeitem, descricao, lugar, status, dataencontrada FROM itens WHERE (1=1) ", connection);
 
                 if (id.Equals("") == false)
                 {
@@ -76,10 +76,16 @@ namespace AchadosEPerdidos.Negocio
                     commando.CommandText += $" AND lugar like @lugar,";
                     commando.Parameters.Add(new MySqlParameter("lugar", $"%{lugar}%"));
                 }
+                
                 if (status.Equals("") == false)
                 {
                     commando.CommandText += $" AND status = @status";
                     commando.Parameters.Add(new MySqlParameter("status", status));
+                }
+                if (data.Equals("") == false)
+                {
+                    commando.CommandText += $" AND dataencontrada like @dataencontrada,";
+                    commando.Parameters.Add(new MySqlParameter("dataencontrada", $"%{data}%"));
                 }
 
                 var reader = commando.ExecuteReader();
@@ -91,12 +97,13 @@ namespace AchadosEPerdidos.Negocio
                         Lugar = reader.GetString("lugar"),
                         Descricao = reader.GetString("descricao"),
                         Status = reader.GetBoolean("status"),
+                        Data = reader.GetDateTime("dataencontrada"),
                         Id = reader.GetInt32("id")
                     });
                 }
             }
 
-            catch
+            catch(Exception err)
             {
 
             }
@@ -137,8 +144,10 @@ namespace AchadosEPerdidos.Negocio
                 }
                 if (data.Equals("") == false)
                 {
-                    commando.CommandText += $" AND data like @dataencontrada,";
-                    commando.Parameters.Add(new MySqlParameter("data", $"%{data}%"));
+
+                    commando.CommandText += $" AND dataencontrada like @data,";
+                    commando.Parameters.Add(new MySqlParameter("dataencontrada", $"%{data}%"));
+
                 }
                 if (nomepessoa.Equals("") == false)
                 {
