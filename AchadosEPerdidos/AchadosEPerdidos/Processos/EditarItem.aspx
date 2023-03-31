@@ -32,10 +32,10 @@
                     <br />
                     <asp:Label CssClass="labels" runat="server" ID="lblLugar" ForeColor="Red"></asp:Label>
                     <br />
-                    <asp:Label CssClass="labels" runat="server" ID="lblDataEncontrada" Text="Data encontrada"></asp:Label>
+                    <asp:Label CssClass="labels" runat="server" ID="lblDataEncontrada" Text="Data encontrada" ></asp:Label>
                     <br />
 
-                    <asp:TextBox CssClass="textbox" runat="server" ID="txtData"></asp:TextBox>
+                    <asp:TextBox CssClass="textbox" runat="server" ID="txtData" TextMode="Date"></asp:TextBox>
                     <br />
                     <asp:Label CssClass="labels" runat="server" ID="lblData" ForeColor="Red"></asp:Label>
                     <br />
