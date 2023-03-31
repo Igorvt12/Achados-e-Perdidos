@@ -145,7 +145,7 @@ namespace AchadosEPerdidos.Negocio
                 if (data.Equals("") == false)
                 {
 
-                    commando.CommandText += $" AND dataencontrada like @data,";
+                    commando.CommandText += $" AND dataencontrada like @dataencontrada,";
                     commando.Parameters.Add(new MySqlParameter("dataencontrada", $"%{data}%"));
 
                 }
@@ -190,14 +190,14 @@ namespace AchadosEPerdidos.Negocio
                                                 nomeitem = @nomeitem,
                                                 lugar = @lugar,
                                                 descricao = @descricao,
-                                                data = @data,
+                                                dataencontrada = @dataencontrada,
                                                 email = @email,
                                                 id_funcionario = @id_funcionario WHERE id = @id", connection);
 
                 comando.Parameters.Add(new MySqlParameter("nomeitem", item.NomeItem));
                 comando.Parameters.Add(new MySqlParameter("lugar", item.Lugar));
                 comando.Parameters.Add(new MySqlParameter("descricao", item.Descricao));
-                comando.Parameters.Add(new MySqlParameter("data", item.Data));
+                comando.Parameters.Add(new MySqlParameter("dataencontrada", item.Data));
                 comando.Parameters.Add(new MySqlParameter("nomepessoa", item.NomePessoa));
                 comando.Parameters.Add(new MySqlParameter("email", item.Email));
                 comando.Parameters.Add(new MySqlParameter("id_funcionario", item.Id_Funcionario));

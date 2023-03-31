@@ -85,15 +85,6 @@ namespace AchadosEPerdidos {
         protected global::System.Web.UI.WebControls.Label lblCreateNomeFunc;
         
         /// <summary>
-        /// Controle txtCreateEmailFuncionario.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCreateEmailFuncionario;
-        
-        /// <summary>
         /// Controle lblCreateEmailFunc.
         /// </summary>
         /// <remarks>
@@ -101,6 +92,15 @@ namespace AchadosEPerdidos {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblCreateEmailFunc;
+        
+        /// <summary>
+        /// Controle txtCreateEmailFuncionario.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtCreateEmailFuncionario;
         
         /// <summary>
         /// Controle txtCreateSenhaFuncionario.

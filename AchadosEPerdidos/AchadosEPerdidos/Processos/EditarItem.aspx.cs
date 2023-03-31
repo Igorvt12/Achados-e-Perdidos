@@ -22,7 +22,7 @@ namespace AchadosEPerdidos.Processos
                 txtNomeItem.Text = item.NomeItem;
                 txtDescricao.Text = item.Descricao;
                 txtLugar.Text = item.Lugar;
-                txtData.Text = item.Data.ToString();
+                txtData.Text = item.Data.ToString("dd/MM/yyyy");
                 txtNomePessoa.Text = item.NomePessoa;
             }
         }
