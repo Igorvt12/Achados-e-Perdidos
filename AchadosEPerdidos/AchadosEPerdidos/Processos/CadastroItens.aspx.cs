@@ -264,7 +264,7 @@ namespace AchadosEPerdidos.Processos
         {
             pnlCadastro.Visible = true;
             txtCpfPessoa.Visible = true;
-            grdItens.Visible = false;
+            grdItens.Visible = false;            
 
         }
 
