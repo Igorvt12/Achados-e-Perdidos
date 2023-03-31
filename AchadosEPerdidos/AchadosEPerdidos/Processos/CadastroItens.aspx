@@ -101,7 +101,7 @@
                 <asp:Label runat="server" ID="lblDescrição" ForeColor="Red"></asp:Label>
                 <br />
 
-                <asp:TextBox runat="server" ID="txtLugar" CssClass="TextBox" placeholder="Lugar que foi encontrado"></asp:TextBox>
+                <asp:TextBox runat="server" ID="txtLugar" CssClass="TextBox" placeholder="Lugar aonde estava/Lugar onde foi encontrado."></asp:TextBox>
                 <br />
                 <asp:Label runat="server" ID="lblLugar" ForeColor="Red"></asp:Label>
                 <br />
