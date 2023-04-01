@@ -1,0 +1,15 @@
+LINK PARA O BANCO DE DADOS
+
+https://mysql.site4now.net/
+
+--------------------------------------------
+INFORMACOES PARA ACESSAR O BANCO DE DADOS
+
+servidor: mysql5025.site4now.net
+utilizador: a95ead_achados
+palavra-passe: achadostcc123
+
+--------------------------------------------
+LINK PARA ABRIR O SITE
+
+renanzokk-001-site1.ftempurl.com

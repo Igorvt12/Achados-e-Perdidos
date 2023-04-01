@@ -1,0 +1,199 @@
+﻿body {
+    
+}
+
+.ContainerDeCima {
+    background: linear-gradient(132deg, rgba(181,175,177,1) 0%, rgba(0,0,0,1) 0%, rgba(32,8,14,1) 0%, rgba(181,13,48,1) 100%);
+}
+
+.ContainerImage {
+    background-color: rgba(0,0,0,.6);
+ 
+    color: white;
+    height: 330px;
+}
+
+.fraseimagem {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+    line-height:35px;
+    padding-top:60px;
+}
+
+.Jumbotron { /*Cor da Jumbotron*/
+    text-align: left;
+    background-color: white;
+    
+}
+.Titulo { /*Cor do Titulo*/
+    font-size: 27px;
+    color: #b50d3a;
+    font-family: "Montserrat", sans-serif;
+    margin: 0px 0px 15px 0px;
+    line-height: 1.4;
+    color: #b50d3a;
+    font-weight: 500;
+    
+}
+
+.Frase {
+    color: #333;
+    font-family: "Montserrat",sans-serif;
+    line-height: 1.4;
+    padding: 0px;
+    margin: 0px;
+    font-weight: 300;
+    
+}
+
+.Textos {
+    color: #b50d3a; /*Vermelho*/
+    border-bottom: 1px solid;
+    border-color: #b50d3a;
+    font-family: "Montserrat",sans-serif;
+    font-weight: 300;
+    text-align:center;
+}
+
+.TextBox { /*Modificações das TextBox*/
+    display:block;
+    height: 34px;
+    width: 100%;
+    position: center;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857;
+    background-color: #f1f1f1;
+    color: #555;
+    border: 1px solid #eee;
+    border-radius: 4px;    
+}
+
+
+.BotãoRed { /*Modificações dos Botões*/
+    background: linear-gradient(132deg, rgba(181,175,177,1) 0%, rgba(0,0,0,1) 0%, rgba(32,8,14,1) 0%, rgba(181,13,48,1) 100%);
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.42857;
+    border-radius: 25px;
+    font-size: 15px;
+    height: 40px;
+    border-color: white;
+    width:250px;
+}
+
+.Grid {    
+    
+    font-family: "Montserrat", sans-serif;
+    border: 1px solid #b50d3a;
+    border-radius: 5px;
+    font-size:20px;
+    text-align:center;
+    
+}
+
+
+.divCSS > input[type="radio"] {
+    /* remove standard background appearance... */
+    /* create custom radio button appearance */
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    padding: 3px;
+    background-clip: content-box;
+    border: 2px solid #060c3b;
+    border-radius: 50%;
+    margin-right: 0;
+}
+
+tr{
+    text-align:center;
+}
+
+
+th {
+    color: white;
+    text-align: center;
+    background: linear-gradient(132deg, rgba(181,175,177,1) 0%, rgba(0,0,0,1) 0%, rgba(32,8,14,1) 0%, rgba(181,13,48,1) 100%);
+}
+td {
+    color: #b50d3a;
+}
+
+
+
+TitulosGrid{
+    text-align:center;
+    font-weight:400;
+}
+
+.ItemPerdidoAchado {
+    background: linear-gradient(132deg, rgba(181,175,177,1) 0%, rgba(0,0,0,1) 0%, rgba(32,8,14,1) 0%, rgba(181,13,48,1) 100%);
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    text-align: center;
+    width: 400px;
+    font-size: 24px;
+    border:0px solid;
+    
+}
+
+.radio {
+    border-color: #b50d3a;
+    font-family: "Montserrat", sans-serif;
+    color: #b50d3a;
+    height: 100px;
+    text-align: center;
+    width:200px;
+    font-weight:900;
+   
+}
+
+.FraseContainer {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+
+.lbl {
+    color: #b50d3a;
+}
+.BotãoAlterar {    
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,82,1) 0%, rgba(0,0,0,1) 100%);
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    
+    border-color: white;
+    line-height: 1.42857;
+    height: 30px;
+    width: 130px;
+    font-weight:600;
+}
+
+.BotãoEditar {
+    background: linear-gradient(90deg, rgba(156,69,3,1) 18%, rgba(2,0,36,1) 84%);
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    
+    border-color: white;
+    line-height: 1.42857;
+    height: 30px;
+    width: 120px;
+    font-weight: 600;
+}
+
+.BotãoExcluir {
+    background: linear-gradient(90deg, rgba(25,3,97,1) 18%, rgba(2,0,36,1) 84%);
+    color: white;
+    font-family: "Montserrat", sans-serif;   
+    border-color: white;
+    line-height: 1.42857;
+    height: 30px;
+    width: 140px;
+    font-weight: 600;
+}
+
+
+
+

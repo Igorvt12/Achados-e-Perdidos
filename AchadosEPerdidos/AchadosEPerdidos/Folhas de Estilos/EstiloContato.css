@@ -1,0 +1,67 @@
+﻿body {
+    background: linear-gradient(132deg, rgba(181,175,177,1) 0%, rgba(0,0,0,1) 0%, rgba(32,8,14,1) 0%, rgba(181,13,48,1) 100%);
+}
+
+.Jumbotron {
+    background-color: white;
+    border-radius: 7px;
+}
+
+.labels {
+    font-size:20px;
+    color: #b50d3a;
+    font-family: "Montserrat",sans-serif;
+}
+
+.titulo {    
+    font-family: "Montserrat",sans-serif;
+    font-weight:100;
+}
+
+
+.textboxmensagem {
+    height: 80px;
+    width: 250px;
+    position: center;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857;
+    background-color: #f1f1f1;
+    color: #555;
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+.textbox {
+    
+    height: 30px;
+    width: 350px;
+    position: center;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857;
+    background-color: #f1f1f1;
+    color: #555;
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+
+.BotãoRed {
+    background: linear-gradient(132deg, rgba(181,175,177,1) 0%, rgba(0,0,0,1) 0%, rgba(32,8,14,1) 0%, rgba(181,13,48,1) 100%);
+    color: white;
+    font-family: "Montserrat-Regular", sans-serif;
+    line-height: 1.42857;
+    border-radius: 25px;
+    font-size: 15px;
+    height: 40px;
+    border-color: white;
+    width: 250px;
+}
+
+.lista {
+    font-family: 'Montserrat',sans-serif;
+    background-color: #f1f1f1;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    text-align: center;
+    line-height: 1.42857;
+}
