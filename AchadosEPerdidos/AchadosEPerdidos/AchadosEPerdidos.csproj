@@ -183,6 +183,7 @@
     <Content Include="fonts\Montserrat-Thin.ttf" />
     <Content Include="fonts\Montserrat-SemiBoldItalic.ttf" />
     <Content Include="fonts\Montserrat-VariableFont_wght.ttf" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Properties\PublishProfiles\renanzokk-001-site1 - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\renanzokk-001-site1 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
